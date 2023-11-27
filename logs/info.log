@@ -90,3 +90,728 @@
 2023-11-25 14:23:17 error: 500 - User validation failed: password: Password must be strong with at least 8 characters, including uppercase, lowercase, and numbers - /user/register - POST - ::ffff:127.0.0.1
 2023-11-25 14:23:17 info: POST /user/register [31m500 338.652 ms - 791
 2023-11-25 14:23:25 info: POST /user/register [32m200 457.450 ms - 334
+2023-11-25 14:38:38 error: 404 - route not found - /user/login - GET - ::ffff:127.0.0.1
+2023-11-25 14:38:38 info: GET /user/login [33m404 15.009 ms - 57
+2023-11-25 14:38:54 error: 401 - Invalid login credentials - /user/login - POST - ::ffff:127.0.0.1
+2023-11-25 14:38:54 info: POST /user/login [33m401 159.971 ms - 452
+2023-11-25 14:38:59 error: 401 - Invalid login credentials - /user/login - POST - ::ffff:127.0.0.1
+2023-11-25 14:38:59 info: POST /user/login [33m401 169.169 ms - 452
+2023-11-25 14:39:13 error: 401 - Invalid login credentials - /user/login - POST - ::ffff:127.0.0.1
+2023-11-25 14:39:13 info: POST /user/login [33m401 280.703 ms - 452
+2023-11-25 14:42:12 error: 401 - Invalid login credentials - /user/login - POST - ::ffff:127.0.0.1
+2023-11-25 14:42:12 info: POST /user/login [33m401 441.664 ms - 452
+2023-11-25 14:42:57 error: 400 - Email already registered - /user/register - POST - ::ffff:127.0.0.1
+2023-11-25 14:42:57 info: POST /user/register [33m400 226.052 ms - 306
+2023-11-25 14:43:06 error: 401 - Invalid login credentials - /user/login - POST - ::ffff:127.0.0.1
+2023-11-25 14:43:06 info: POST /user/login [33m401 206.996 ms - 452
+2023-11-25 14:44:00 error: 401 - Invalid login credentials - /user/login - POST - ::ffff:127.0.0.1
+2023-11-25 14:44:00 info: POST /user/login [33m401 213.131 ms - 452
+2023-11-25 14:44:30 error: 401 - Invalid login credentials - /user/login - POST - ::ffff:127.0.0.1
+2023-11-25 14:44:30 info: POST /user/login [33m401 350.897 ms - 452
+2023-11-25 14:45:14 error: 401 - Incorrect password - /user/login - POST - ::ffff:127.0.0.1
+2023-11-25 14:45:15 info: POST /user/login [33m401 3667.276 ms - 355
+2023-11-25 14:45:32 info: POST /user/login [32m200 438.007 ms - 121
+2023-11-25 14:58:55 info: POST /user/login [32m200 488.096 ms - 121
+2023-11-25 14:59:49 info: POST /user/login [32m200 680.678 ms - 121
+2023-11-25 15:14:44 info: GET /user/profile [32m200 4.653 ms - -
+2023-11-25 15:15:18 error: 500 - user is not defined - /user/profile - GET - ::1
+2023-11-25 15:15:18 info: GET /user/profile [31m500 23.215 ms - 1428
+2023-11-25 15:15:49 info: GET /user/profile [32m200 6.815 ms - -
+2023-11-25 15:30:27 error: 404 - Please authenticate - /user/profile - GET - ::1
+2023-11-25 15:30:27 info: GET /user/profile [33m404 22.270 ms - 61
+2023-11-25 15:31:24 info: POST /user/login [32m200 469.353 ms - 121
+2023-11-25 15:32:39 info: POST /user/login [32m200 445.980 ms - 121
+2023-11-25 15:32:57 info: POST /user/login [32m200 375.899 ms - 121
+2023-11-25 15:33:06 error: 404 - route not found - /user/profile - POST - ::1
+2023-11-25 15:33:06 info: POST /user/profile [33m404 3.664 ms - 57
+2023-11-25 15:35:50 info: POST /user/login [32m200 682.021 ms - 121
+2023-11-25 15:36:03 error: 500 - jwt must be a string - /user/profile - GET - ::1
+2023-11-25 15:36:03 info: GET /user/profile [31m500 6.111 ms - 1432
+2023-11-25 15:37:53 error: 500 - jwt must be a string - /user/profile - GET - ::1
+2023-11-25 15:37:53 info: GET /user/profile [31m500 24.356 ms - 1432
+2023-11-25 15:38:23 error: 500 - jwt malformed - /user/profile - GET - ::1
+2023-11-25 15:38:23 info: GET /user/profile [31m500 26.994 ms - 1418
+2023-11-25 15:39:32 info: GET /user/profile [32m200 6.439 ms - 15
+2023-11-25 15:39:32 error: 500 - jwt malformed - /user/profile - GET - ::1
+2023-11-25 15:39:52 info: GET /user/profile [32m200 5.622 ms - 1
+2023-11-25 15:39:52 error: 500 - jwt malformed - /user/profile - GET - ::1
+2023-11-25 15:41:03 info: GET /user/profile [32m200 6.061 ms - 1
+2023-11-25 15:41:03 error: 500 - jwt malformed - /user/profile - GET - ::1
+2023-11-25 15:41:55 error: 404 - route not found - /user/login - GET - ::1
+2023-11-25 15:41:55 info: GET /user/login [33m404 18.525 ms - 57
+2023-11-25 15:42:08 info: POST /user/login [32m200 516.179 ms - 121
+2023-11-25 15:43:47 info: POST /user/login [32m200 5940.557 ms - 121
+2023-11-25 15:45:58 info: POST /user/login [32m200 506.137 ms - 122
+2023-11-25 15:46:08 error: 404 - route not found - /user/lprofile - GET - ::1
+2023-11-25 15:46:08 info: GET /user/lprofile [33m404 4.254 ms - 57
+2023-11-25 15:46:26 error: 401 - Invalid token - /user/profile - GET - ::1
+2023-11-25 15:46:26 info: GET /user/profile [33m401 9.444 ms - 1402
+2023-11-25 15:49:00 info: POST /user/login [32m200 593.926 ms - 122
+2023-11-25 15:49:11 error: 404 - route not found - /user/profile - POST - ::1
+2023-11-25 15:49:11 info: POST /user/profile [33m404 3.754 ms - 57
+2023-11-25 15:49:16 error: 401 - Invalid token - /user/profile - GET - ::1
+2023-11-25 15:49:16 info: GET /user/profile [33m401 8.529 ms - 1402
+2023-11-25 15:55:37 error: 401 - Invalid token - /user/profile - GET - ::1
+2023-11-25 15:55:37 info: GET /user/profile [33m401 25.364 ms - 1402
+2023-11-25 15:55:46 error: 500 - encodedToken is not defined - /user/login - POST - ::1
+2023-11-25 15:55:46 info: POST /user/login [31m500 253.432 ms - 238
+2023-11-25 15:56:26 info: POST /user/login [32m200 17363.911 ms - 122
+2023-11-25 15:56:28 info: POST /user/login [32m200 9240.246 ms - 122
+2023-11-25 15:57:28 info: POST /user/login [32m200 525.834 ms - 122
+2023-11-25 15:57:51 info: POST /user/login [32m200 758.833 ms - 122
+2023-11-25 15:59:00 error: 500 - prop is not defined - /user/login - POST - ::1
+2023-11-25 15:59:01 info: POST /user/login [31m500 386.810 ms - 221
+2023-11-25 15:59:26 error: 500 - prop is not defined - /user/login - POST - ::1
+2023-11-25 15:59:26 info: POST /user/login [31m500 289.892 ms - 221
+2023-11-25 15:59:46 info: POST /user/login [32m200 2231.805 ms - 122
+2023-11-25 16:00:24 info: POST /user/login [32m200 575.578 ms - 122
+2023-11-25 16:00:56 info: POST /user/login [32m200 1828.507 ms - 122
+2023-11-25 16:01:43 info: POST /user/login [32m200 608.987 ms - 122
+2023-11-25 16:02:53 info: POST /user/login [32m200 545.175 ms - 122
+2023-11-25 16:03:06 error: 401 - Invalid token - /user/profile - GET - ::1
+2023-11-25 16:03:06 info: GET /user/profile [33m401 21.300 ms - 1402
+2023-11-25 16:04:57 error: 401 - Invalid token - /user/profile - GET - ::1
+2023-11-25 16:04:57 info: GET /user/profile [33m401 35.564 ms - 1402
+2023-11-25 16:05:06 info: POST /user/login [32m200 567.479 ms - 122
+2023-11-25 16:05:18 error: 401 - Invalid token - /user/profile - GET - ::1
+2023-11-25 16:05:18 info: GET /user/profile [33m401 14.384 ms - 1402
+2023-11-25 16:06:23 info: POST /user/login [32m200 661.353 ms - 122
+2023-11-25 16:06:58 info: POST /user/login [32m200 551.231 ms - 122
+2023-11-25 16:07:21 error: 401 - Invalid token - /user/profile - GET - ::1
+2023-11-25 16:07:21 info: GET /user/profile [33m401 9.242 ms - 1402
+2023-11-25 16:07:52 info: POST /user/login [32m200 571.286 ms - 122
+2023-11-25 16:08:00 error: 401 - Invalid token - /user/profile - GET - ::1
+2023-11-25 16:08:00 info: GET /user/profile [33m401 7.848 ms - 1402
+2023-11-25 16:08:27 error: 404 - Please authenticate - /user/profile - GET - ::1
+2023-11-25 16:08:27 info: GET /user/profile [33m404 4.589 ms - 61
+2023-11-25 16:09:19 info: POST /user/login [32m200 617.345 ms - 122
+2023-11-25 16:09:41 error: 401 - Invalid token - /user/profile - GET - ::1
+2023-11-25 16:09:41 info: GET /user/profile [33m401 10.988 ms - 1402
+2023-11-25 16:10:42 info: POST /user/login [32m200 451.889 ms - 122
+2023-11-25 16:11:11 info: POST /user/login [32m200 1828.368 ms - 122
+2023-11-25 16:12:20 info: POST /user/login [32m200 491.528 ms - 122
+2023-11-25 16:12:42 error: 404 - route not found - /user/profile - POST - ::1
+2023-11-25 16:12:42 info: POST /user/profile [33m404 7.255 ms - 57
+2023-11-25 16:12:49 info: GET /user/profile [32m200 470.938 ms - 122
+2023-11-25 17:24:55 error: 500 - isNullOrEmpty is not defined - /staff/signup - POST - ::1
+2023-11-25 17:24:55 info: POST /staff/signup [31m500 11.061 ms - 1445
+2023-11-25 17:25:39 error: 500 - isNullOrEmpty is not defined - /staff/signup - POST - ::1
+2023-11-25 17:25:39 info: POST /staff/signup [31m500 11.368 ms - 1445
+2023-11-25 17:26:01 error: 500 - AppError is not defined - /staff/signup - POST - ::1
+2023-11-25 17:26:01 info: POST /staff/signup [31m500 372.687 ms - 313
+2023-11-25 17:26:19 error: 400 - Email already registered - /staff/signup - POST - ::1
+2023-11-25 17:26:19 info: POST /staff/signup [33m400 1483.329 ms - 307
+2023-11-25 17:26:55 error: 401 - Invalid token - /staff/provide-credentials - POST - ::1
+2023-11-25 17:26:55 info: POST /staff/provide-credentials [33m401 19.424 ms - 1402
+2023-11-25 17:27:23 error: 500 - Staff validation failed: yearsOfExperience: Path `yearsOfExperience` is required. - /staff/signup - POST - ::1
+2023-11-25 17:27:23 info: POST /staff/signup [31m500 437.331 ms - 695
+2023-11-25 17:27:57 info: POST /staff/signup [32m200 559.334 ms - 2
+2023-11-25 17:29:37 info: POST /staff/signup [32m200 532.521 ms - -
+2023-11-25 17:29:42 info: POST /staff/signup [32m200 537.895 ms - -
+2023-11-25 17:30:14 info: POST /staff/signup [32m200 1890.512 ms - -
+2023-11-25 17:31:57 info: POST /staff/signup [32m200 589.297 ms - -
+2023-11-25 17:32:02 error: 400 - Email already registered - /staff/signup - POST - ::1
+2023-11-25 17:32:02 info: POST /staff/signup [33m400 338.351 ms - 307
+2023-11-25 17:32:38 error: 400 - Email already registered - /staff/signup - POST - ::1
+2023-11-25 17:32:38 info: POST /staff/signup [33m400 379.577 ms - 307
+2023-11-25 17:32:43 info: POST /staff/signup [32m200 625.596 ms - 2
+2023-11-25 17:33:40 error: 404 - route not found - /user/signup - POST - ::1
+2023-11-25 17:33:40 info: POST /user/signup [33m404 2.473 ms - 57
+2023-11-25 17:34:04 error: 500 - Staff is not defined - /user/register - POST - ::1
+2023-11-25 17:34:04 info: POST /user/register [31m500 192.699 ms - 307
+2023-11-25 17:34:29 error: 400 - Email already registered - /user/register - POST - ::1
+2023-11-25 17:34:30 info: POST /user/register [33m400 358.013 ms - 306
+2023-11-25 17:34:36 info: POST /user/register [32m200 517.572 ms - 157
+2023-11-25 17:36:12 info: POST /staff/signup [32m200 544.073 ms - 2
+2023-11-25 17:38:16 error: 400 - Email already registered - /staff/signup - POST - ::1
+2023-11-25 17:38:16 info: POST /staff/signup [33m400 338.677 ms - 307
+2023-11-25 17:38:28 error: 400 - Email already registered - /staff/signup - POST - ::1
+2023-11-25 17:38:28 info: POST /staff/signup [33m400 333.308 ms - 307
+2023-11-25 17:39:47 info: POST /staff/signup [32m200 2.912 ms - 9
+2023-11-25 17:40:36 info: POST /staff/signup [32m200 581.590 ms - 2
+2023-11-25 17:44:04 info: POST /staff/signup [32m200 533.386 ms - 2
+2023-11-25 17:45:29 error: 400 - Email already registered - /staff/signup - POST - ::1
+2023-11-25 17:45:29 info: POST /staff/signup [33m400 327.245 ms - 307
+2023-11-25 17:45:35 info: POST /staff/signup [32m200 501.871 ms - 2
+2023-11-25 17:46:49 info: POST /staff/signup [32m200 592.567 ms - 2
+2023-11-25 17:48:41 info: POST /staff/signup [32m200 546.145 ms - 2
+2023-11-25 17:49:09 info: POST /staff/signup [32m200 532.205 ms - 2
+2023-11-25 17:50:21 info: POST /staff/signup [32m200 524.281 ms - 2
+2023-11-25 17:51:01 info: POST /staff/signup [32m200 529.207 ms - 5
+2023-11-25 17:51:26 info: POST /staff/signup [32m200 563.865 ms - -
+2023-11-25 17:51:48 info: POST /staff/signup [32m200 551.800 ms - -
+2023-11-25 17:55:01 info: POST /staff/signup [32m200 553.409 ms - 2
+2023-11-25 17:55:41 info: POST /staff/signup [32m200 576.971 ms - 469
+2023-11-25 17:56:57 error: 404 - Please authenticate - /staff/provide-credentials - POST - ::1
+2023-11-25 17:56:57 info: POST /staff/provide-credentials [33m404 15.195 ms - 61
+2023-11-25 17:57:01 error: 404 - Please authenticate - /staff/provide-credentials - POST - ::1
+2023-11-25 17:57:01 info: POST /staff/provide-credentials [33m404 3.190 ms - 61
+2023-11-25 17:57:17 info: POST /staff/signup [32m200 565.818 ms - 470
+2023-11-25 17:57:33 error: 404 - Please authenticate - /staff/provide-credentials - POST - ::1
+2023-11-25 17:57:33 info: POST /staff/provide-credentials [33m404 1.700 ms - 61
+2023-11-25 17:58:09 error: 404 - Please authenticate - /staff/provide-credentials - POST - ::1
+2023-11-25 17:58:09 info: POST /staff/provide-credentials [33m404 11.421 ms - 61
+2023-11-25 17:59:16 error: 404 - Please authenticate - /staff/provide-credentials - POST - ::1
+2023-11-25 17:59:16 info: POST /staff/provide-credentials [33m404 10.877 ms - 61
+2023-11-25 18:01:00 info: POST /staff/register [32m200 564.723 ms - 471
+2023-11-25 18:04:15 info: POST /staff/provide-credentials [32m200 188.383 ms - 458
+2023-11-25 19:50:48 error: 404 - route not found - /staff/provide-credentials - POST - ::1
+2023-11-25 19:50:48 info: POST /staff/provide-credentials [33m404 312.739 ms - 57
+2023-11-25 19:51:33 error: 404 - route not found - /staff/provide-credentials - POST - ::1
+2023-11-25 19:51:33 info: POST /staff/provide-credentials [33m404 343.067 ms - 57
+2023-11-25 20:09:12 error: 404 - route not found - /staff/provide-credentials - POST - ::1
+2023-11-25 20:09:12 info: POST /staff/provide-credentials [33m404 173.880 ms - 57
+2023-11-25 20:11:51 error: 500 - Cannot read properties of undefined (reading 'certificate1') - /staff/provide-credentials - POST - ::1
+2023-11-25 20:11:51 info: POST /staff/provide-credentials [31m500 204.799 ms - 874
+2023-11-25 20:14:55 error: 500 - Please upload an image - /staff/provide-credentials - POST - ::1
+2023-11-25 20:14:55 info: POST /staff/provide-credentials [31m500 34.950 ms - 1352
+2023-11-25 20:15:39 error: 500 - Cannot read properties of undefined (reading '0') - /staff/provide-credentials - POST - ::1
+2023-11-25 20:15:39 info: POST /staff/provide-credentials [31m500 392.986 ms - 852
+2023-11-25 20:17:12 error: 500 - Cannot read properties of undefined (reading '0') - /staff/provide-credentials - POST - ::1
+2023-11-25 20:17:12 info: POST /staff/provide-credentials [31m500 264.738 ms - 852
+2023-11-25 20:17:29 error: 500 - Cannot read properties of undefined (reading '0') - /staff/provide-credentials - POST - ::1
+2023-11-25 20:17:29 info: POST /staff/provide-credentials [31m500 321.464 ms - 852
+2023-11-25 20:17:54 error: 500 - Unsupported input '[object Object]' of type object - /staff/provide-credentials - POST - ::1
+2023-11-25 20:17:54 info: POST /staff/provide-credentials [31m500 292.013 ms - 1242
+2023-11-25 20:18:33 error: 500 - Cannot read properties of undefined (reading '0') - /staff/provide-credentials - POST - ::1
+2023-11-25 20:18:33 info: POST /staff/provide-credentials [31m500 238.583 ms - 852
+2023-11-25 20:19:18 info: POST /staff/provide-credentials [32m200 2355.968 ms - 350999
+2023-11-25 20:20:33 info: POST /staff/provide-credentials [32m200 205.552 ms - -
+2023-11-25 20:20:37 info: POST /staff/provide-credentials [32m200 208.191 ms - -
+2023-11-25 20:21:10 error: 500 - Unsupported input '[object Object]' of type object - /staff/provide-credentials - POST - ::1
+2023-11-25 20:21:10 info: POST /staff/provide-credentials [31m500 227.748 ms - 1242
+2023-11-25 20:21:39 error: 500 - Unsupported input '[object Object]' of type object - /staff/provide-credentials - POST - ::1
+2023-11-25 20:21:39 info: POST /staff/provide-credentials [31m500 245.116 ms - 1242
+2023-11-25 20:22:24 info: POST /staff/provide-credentials [32m200 4456.272 ms - 350999
+2023-11-25 20:23:02 error: 500 - Input file is missing: - /staff/provide-credentials - POST - ::1
+2023-11-25 20:23:02 info: POST /staff/provide-credentials [31m500 318.684 ms - 109
+2023-11-25 20:24:29 error: 500 - Invalid input - /staff/provide-credentials - POST - ::1
+2023-11-25 20:24:29 info: POST /staff/provide-credentials [31m500 229.316 ms - 900
+2023-11-25 20:24:49 info: POST /staff/provide-credentials [32m200 242.655 ms - -
+2023-11-25 20:25:14 info: POST /staff/provide-credentials [32m200 234.708 ms - 97955
+2023-11-25 20:29:57 info: POST /staff/provide-credentials [32m200 276.152 ms - 60975
+2023-11-26 08:13:48 error: 401 - Invalid token - /staff/provide-credentials - POST - ::1
+2023-11-26 08:13:48 info: POST /staff/provide-credentials [33m401 10048.754 ms - 279
+2023-11-26 09:05:45 info: POST /staff/register [32m200 502.167 ms - 449
+2023-11-26 09:06:25 error: 500 - Cannot read properties of undefined (reading 'forEach') - /staff/provide-credentials - POST - ::1
+2023-11-26 09:06:25 info: POST /staff/provide-credentials [31m500 5.425 ms - 1533
+2023-11-26 09:06:58 error: 500 - Cannot read properties of undefined (reading 'forEach') - /staff/provide-credentials - POST - ::1
+2023-11-26 09:06:58 info: POST /staff/provide-credentials [31m500 16.895 ms - 1533
+2023-11-26 09:07:02 error: 500 - Cannot read properties of undefined (reading 'forEach') - /staff/provide-credentials - POST - ::1
+2023-11-26 09:07:02 info: POST /staff/provide-credentials [31m500 5.634 ms - 1533
+2023-11-26 09:07:38 error: 404 - Please authenticate - /staff/provide-credentials - POST - ::1
+2023-11-26 09:07:38 info: POST /staff/provide-credentials [33m404 13.680 ms - 61
+2023-11-26 09:07:59 info: POST /staff/register [32m200 487.737 ms - 450
+2023-11-26 09:08:07 error: 500 - Cannot read properties of undefined (reading 'certificate1') - /staff/provide-credentials - POST - ::1
+2023-11-26 09:08:07 info: POST /staff/provide-credentials [31m500 143.728 ms - 874
+2023-11-26 09:09:39 info: POST /staff/provide-credentials [33m400 11.336 ms - 28
+2023-11-26 09:10:11 info: POST /staff/provide-credentials [33m400 14.242 ms - 28
+2023-11-26 09:26:54 error: 500 - Unexpected field - /staff/provide-credentials - POST - ::1
+2023-11-26 09:26:54 info: POST /staff/provide-credentials [31m500 21.555 ms - 1295
+2023-11-26 09:28:44 error: 500 - Unexpected field - /staff/provide-credentials - POST - ::1
+2023-11-26 09:28:44 info: POST /staff/provide-credentials [31m500 24.370 ms - 1295
+2023-11-26 09:29:25 error: 500 - Unexpected field - /staff/provide-credentials - POST - ::1
+2023-11-26 09:29:25 info: POST /staff/provide-credentials [31m500 23.327 ms - 1295
+2023-11-26 09:30:42 error: 500 - Unexpected field - /staff/provide-credentials - POST - ::1
+2023-11-26 09:30:42 info: POST /staff/provide-credentials [31m500 20.582 ms - 1295
+2023-11-26 09:31:11 error: 500 - Unexpected field - /staff/provide-credentials - POST - ::1
+2023-11-26 09:31:11 info: POST /staff/provide-credentials [31m500 7.219 ms - 1295
+2023-11-26 09:31:16 error: 500 - Unexpected field - /staff/provide-credentials - POST - ::1
+2023-11-26 09:31:16 info: POST /staff/provide-credentials [31m500 5.167 ms - 1295
+2023-11-26 09:31:48 info: POST /staff/provide-credentials [32m200 162.585 ms - 612
+2023-11-26 09:32:15 info: POST /staff/provide-credentials [32m200 152.730 ms - 612
+2023-11-26 09:32:24 info: POST /staff/provide-credentials [32m200 155.502 ms - 143966
+2023-11-26 09:34:58 info: POST /staff/provide-credentials [32m200 3872.833 ms - 498
+2023-11-26 09:35:57 info: POST /staff/provide-credentials [32m200 179.624 ms - 498
+2023-11-26 09:36:02 info: POST /staff/provide-credentials [32m200 163.185 ms - 498
+2023-11-26 09:36:14 info: POST /staff/provide-credentials [32m200 145.679 ms - 498
+2023-11-26 09:37:02 info: POST /staff/provide-credentials [32m200 163.182 ms - 287679
+2023-11-26 09:37:49 info: POST /staff/provide-credentials [32m200 143.519 ms - 655
+2023-11-26 09:43:02 error: 500 - Please upload an image - /staff/provide-credentials - POST - ::1
+2023-11-26 09:43:02 info: POST /staff/provide-credentials [31m500 7.387 ms - 1352
+2023-11-26 09:43:13 info: POST /staff/provide-credentials [32m200 169.910 ms - 685447
+2023-11-26 09:53:46 info: POST /staff/register [32m200 498.615 ms - 450
+2023-11-26 09:54:07 info: POST /staff/provide-credentials [32m200 240.193 ms - 203
+2023-11-26 09:54:40 info: POST /staff/provide-credentials [32m200 8320.653 ms - 1152
+2023-11-26 21:03:45 error: 500 - image is not defined - /staff/provide-credentials - POST - ::1
+2023-11-26 21:03:45 info: POST /staff/provide-credentials [31m500 250.328 ms - 308
+2023-11-26 21:04:24 info: POST /staff/provide-credentials [32m200 248.391 ms - 555504
+2023-11-26 21:13:31 error: 500 - Cannot read properties of undefined (reading 'length') - /staff/provide-credentials - POST - ::1
+2023-11-26 21:13:31 info: POST /staff/provide-credentials [31m500 248.547 ms - 862
+2023-11-26 21:14:06 error: 400 - Please validate all fields - /staff/provide-credentials - POST - ::1
+2023-11-26 21:14:06 info: POST /staff/provide-credentials [33m400 1877.424 ms - 802
+2023-11-26 21:16:26 info: POST /staff/provide-credentials [32m200 394.416 ms - 555635
+2023-11-26 21:17:51 info: POST /staff/provide-credentials [32m200 257.430 ms - 555727
+2023-11-26 21:19:43 error: 500 - professionalReferences.foreach is not a function - /staff/provide-credentials - POST - ::1
+2023-11-26 21:19:43 info: POST /staff/provide-credentials [31m500 2704.979 ms - 359
+2023-11-26 21:20:07 error: 500 - professionalReferences.map is not a function - /staff/provide-credentials - POST - ::1
+2023-11-26 21:20:07 info: POST /staff/provide-credentials [31m500 7387.615 ms - 351
+2023-11-26 21:21:43 error: 500 - professionalReferences.map is not a function - /staff/provide-credentials - POST - ::1
+2023-11-26 21:21:43 info: POST /staff/provide-credentials [31m500 288.302 ms - 351
+2023-11-26 21:22:01 info: POST /staff/provide-credentials [32m200 7143.195 ms - 557874
+2023-11-26 21:22:41 info: POST /staff/provide-credentials [32m200 7379.109 ms - 555635
+2023-11-26 21:24:00 error: 401 - Invalid token - /staff/provide-credentials - POST - ::1
+2023-11-26 21:24:00 info: POST /staff/provide-credentials [33m401 10059.943 ms - 279
+2023-11-26 21:24:10 error: 500 - Cannot read properties of undefined (reading 'map') - /staff/provide-credentials - POST - ::1
+2023-11-26 21:24:10 info: POST /staff/provide-credentials [31m500 361.138 ms - 856
+2023-11-26 21:24:23 error: 500 - Cannot read properties of undefined (reading 'map') - /staff/provide-credentials - POST - ::1
+2023-11-26 21:24:23 info: POST /staff/provide-credentials [31m500 335.541 ms - 856
+2023-11-26 21:24:52 info: POST /staff/register [32m200 797.491 ms - 479
+2023-11-26 21:24:59 error: 500 - Cannot read properties of undefined (reading 'map') - /staff/provide-credentials - POST - ::1
+2023-11-26 21:24:59 info: POST /staff/provide-credentials [31m500 151.177 ms - 856
+2023-11-26 21:25:54 error: 500 - Cannot read properties of undefined (reading 'map') - /staff/provide-credentials - POST - ::1
+2023-11-26 21:25:54 info: POST /staff/provide-credentials [31m500 196.008 ms - 856
+2023-11-26 21:27:01 error: 500 - Cannot read properties of undefined (reading 'map') - /staff/provide-credentials - POST - ::1
+2023-11-26 21:27:01 info: POST /staff/provide-credentials [31m500 252.651 ms - 856
+2023-11-26 21:27:45 error: 401 - Invalid token - /staff/provide-credentials - POST - ::1
+2023-11-26 21:27:45 info: POST /staff/provide-credentials [33m401 10071.784 ms - 279
+2023-11-26 21:27:55 info: POST /staff/register [32m200 641.262 ms - 480
+2023-11-26 21:28:01 error: 500 - images is not defined - /staff/provide-credentials - POST - ::1
+2023-11-26 21:28:01 info: POST /staff/provide-credentials [31m500 169.535 ms - 800
+2023-11-26 21:28:39 error: 500 - images is not defined - /staff/provide-credentials - POST - ::1
+2023-11-26 21:28:39 info: POST /staff/provide-credentials [31m500 1376.568 ms - 800
+2023-11-26 21:29:05 info: POST /staff/provide-credentials [32m200 2519.715 ms - 467
+2023-11-26 21:29:20 info: POST /staff/provide-credentials [32m200 217.976 ms - 596
+2023-11-26 21:29:45 info: POST /staff/provide-credentials [32m200 247.178 ms - 596
+2023-11-26 21:31:27 info: POST /staff/provide-credentials [32m200 256.499 ms - 596
+2023-11-26 21:32:28 info: POST /staff/provide-credentials [32m200 953.131 ms - 661
+2023-11-26 21:34:06 info: POST /staff/provide-credentials [32m200 2039.054 ms - 661
+2023-11-26 21:38:25 info: POST /staff/provide-credentials [32m200 257.822 ms - 658
+2023-11-26 21:41:43 info: POST /staff/provide-credentials [32m200 4583.814 ms - 601
+2023-11-26 21:43:11 info: POST /staff/provide-credentials [32m200 5012.222 ms - 601
+2023-11-26 21:43:18 info: POST /staff/provide-credentials [32m200 163.030 ms - 601
+2023-11-26 21:43:20 info: POST /staff/provide-credentials [32m200 230.510 ms - 601
+2023-11-26 21:43:38 info: POST /staff/register [32m200 572.511 ms - 448
+2023-11-26 21:44:14 info: POST /staff/register [32m200 1401.316 ms - 482
+2023-11-26 21:47:42 error: 401 - Invalid token - /user/profile - GET - ::1
+2023-11-26 21:47:42 info: GET /user/profile [33m401 336.007 ms - 279
+2023-11-26 21:48:06 info: GET /staff/profile [32m200 1.682 ms - -
+2023-11-26 21:49:02 info: GET /staff/profile [32m200 2331.852 ms - 469
+2023-11-26 21:50:50 info: GET /staff/profile [32m200 282.158 ms - 469
+2023-11-26 21:51:25 info: POST /staff/provide-credentials [32m200 439.726 ms - 699
+2023-11-26 21:51:44 info: POST /staff/provide-credentials [32m200 4312.926 ms - 555803
+2023-11-26 22:31:03 error: 401 - Invalid token - /user/initiatePremiumSubscription - POST - ::1
+2023-11-26 22:31:03 info: POST /user/initiatePremiumSubscription [33m401 279.623 ms - 279
+2023-11-26 22:32:30 info: POST /user/register [32m200 675.482 ms - 242
+2023-11-26 22:32:37 error: 401 - Invalid token - /user/initiatePremiumSubscription - POST - ::1
+2023-11-26 22:32:37 info: POST /user/initiatePremiumSubscription [33m401 180.123 ms - 279
+2023-11-26 22:33:37 info: POST /user/initiatePremiumSubscription [31m500 21.938 ms - 26
+2023-11-26 22:35:34 info: POST /user/initiatePremiumSubscription [31m500 15.763 ms - 26
+2023-11-26 22:43:02 error: 500 - Paystack is not a function - /user/initiatePremiumSubscription - POST - ::1
+2023-11-26 22:43:02 info: POST /user/initiatePremiumSubscription [31m500 28.645 ms - 1437
+2023-11-26 22:45:00 error: 500 - Paystack is not a function - /user/initiatePremiumSubscription - POST - ::1
+2023-11-26 22:45:00 info: POST /user/initiatePremiumSubscription [31m500 17.310 ms - 1437
+2023-11-26 22:53:36 info: POST /user/initiatePremiumSubscription [31m500 18.358 ms - 29
+2023-11-26 22:54:40 info: POST /user/initiatePremiumSubscription [32m200 580.830 ms - 80
+2023-11-26 22:55:40 info: POST /user/initiatePremiumSubscription [32m200 684.970 ms - 88
+2023-11-26 22:56:46 info: POST /user/initiatePremiumSubscription [32m200 491.083 ms - 88
+2023-11-26 22:56:49 info: POST /user/initiatePremiumSubscription [32m200 690.694 ms - 88
+2023-11-26 22:56:51 info: POST /user/initiatePremiumSubscription [32m200 502.955 ms - 80
+2023-11-26 22:56:53 info: POST /user/initiatePremiumSubscription [32m200 510.010 ms - 88
+2023-11-26 22:56:56 info: POST /user/initiatePremiumSubscription [32m200 560.039 ms - 80
+2023-11-26 22:57:02 info: POST /user/initiatePremiumSubscription [32m200 598.251 ms - 88
+2023-11-26 22:58:57 info: POST /user/initiatePremiumSubscription [32m200 655.721 ms - 80
+2023-11-26 23:00:54 info: POST /user/initiatePremiumSubscription [32m200 581.711 ms - 88
+2023-11-26 23:00:57 info: POST /user/initiatePremiumSubscription [32m200 547.667 ms - 88
+2023-11-26 23:02:30 info: POST /user/initiatePremiumSubscription [32m200 845.283 ms - 209
+2023-11-27 10:39:26 info: POST /user/confirmPremiumSubscription [31m500 13.896 ms - 23
+2023-11-27 10:39:44 info: POST /user/initiatePremiumSubscription [32m200 610.994 ms - 88
+2023-11-27 10:42:20 info: POST /user/initiatePremiumSubscription [32m200 535.058 ms - 88
+2023-11-27 10:42:52 info: POST /user/initiatePremiumSubscription [32m200 576.494 ms - 88
+2023-11-27 10:44:23 info: POST /user/initiatePremiumSubscription [32m200 736.781 ms - 223
+2023-11-27 10:45:20 info: POST /user/confirmPremiumSubscription [31m500 6.222 ms - 23
+2023-11-27 10:49:41 info: POST /user/confirmPremiumSubscription [33m400 603.784 ms - 39
+2023-11-27 10:50:24 info: POST /user/confirmPremiumSubscription [32m200 559.840 ms - 1457
+2023-11-27 10:51:53 info: POST /user/initiatePremiumSubscription [32m200 586.370 ms - 77
+2023-11-27 10:52:01 info: POST /user/initiatePremiumSubscription [32m200 716.347 ms - 202
+2023-11-27 10:53:41 info: POST /user/initiatePremiumSubscription [32m200 849.272 ms - 203
+2023-11-27 10:54:00 info: POST /user/initiatePremiumSubscription [32m200 519.531 ms - 77
+2023-11-27 10:54:05 info: POST /user/initiatePremiumSubscription [32m200 2218.140 ms - 60
+2023-11-27 10:54:10 info: POST /user/initiatePremiumSubscription [32m200 669.140 ms - 77
+2023-11-27 10:54:12 info: POST /user/initiatePremiumSubscription [32m200 529.412 ms - 77
+2023-11-27 10:54:15 info: POST /user/initiatePremiumSubscription [32m200 669.059 ms - 204
+2023-11-27 10:55:11 info: POST /user/initiatePremiumSubscription [32m200 572.617 ms - 77
+2023-11-27 10:55:15 info: POST /user/initiatePremiumSubscription [32m200 651.283 ms - 60
+2023-11-27 10:55:17 info: POST /user/initiatePremiumSubscription [32m200 519.441 ms - 77
+2023-11-27 10:55:21 info: POST /user/initiatePremiumSubscription [32m200 487.132 ms - 77
+2023-11-27 10:55:24 info: POST /user/initiatePremiumSubscription [32m200 530.364 ms - 77
+2023-11-27 10:55:28 info: POST /user/initiatePremiumSubscription [32m200 2305.874 ms - 201
+2023-11-27 10:56:08 info: POST /user/initiatePremiumSubscription [36m302 505.668 ms - 31
+2023-11-27 10:56:08 error: 404 - route not found - /user/undefined - GET - ::1
+2023-11-27 10:56:08 info: GET /user/undefined [33m404 5.202 ms - 57
+2023-11-27 10:56:14 info: POST /user/initiatePremiumSubscription [36m302 547.915 ms - 31
+2023-11-27 10:56:14 error: 404 - route not found - /user/undefined - GET - ::1
+2023-11-27 10:56:14 info: GET /user/undefined [33m404 1.940 ms - 57
+2023-11-27 10:56:21 info: POST /user/initiatePremiumSubscription [36m302 714.123 ms - 67
+2023-11-27 11:09:12 error: 401 - Invalid token - /user/initiatePremiumSubscription - POST - ::1
+2023-11-27 11:09:12 info: POST /user/initiatePremiumSubscription [33m401 174.201 ms - 279
+2023-11-27 11:09:59 info: POST /user/register [32m200 562.016 ms - 243
+2023-11-27 11:10:30 info: POST /user/initiatePremiumSubscription [32m200 720.143 ms - -
+2023-11-27 11:11:13 info: POST /user/initiatePremiumSubscription [32m200 692.258 ms - -
+2023-11-27 11:11:16 info: POST /user/initiatePremiumSubscription [32m200 772.105 ms - 47
+2023-11-27 11:12:27 info: POST /user/confirmPremiumSubscription [33m400 704.225 ms - 39
+2023-11-27 11:12:34 info: POST /user/confirmPremiumSubscription [32m200 834.548 ms - 1542
+2023-11-27 11:12:39 info: POST /user/confirmPremiumSubscription [33m400 647.370 ms - 39
+2023-11-27 11:12:41 info: POST /user/confirmPremiumSubscription [33m400 674.631 ms - 39
+2023-11-27 11:12:43 info: POST /user/confirmPremiumSubscription [33m400 657.306 ms - 39
+2023-11-27 11:12:45 info: POST /user/confirmPremiumSubscription [33m400 694.973 ms - 39
+2023-11-27 11:14:33 info: POST /user/initiatePremiumSubscription [32m200 722.616 ms - -
+2023-11-27 11:15:17 info: POST /user/initiatePremiumSubscription [32m200 7752.374 ms - 77
+2023-11-27 11:15:58 info: POST /user/initiatePremiumSubscription [32m200 678.155 ms - 77
+2023-11-27 11:16:02 info: POST /user/initiatePremiumSubscription [32m200 1214.525 ms - 178
+2023-11-27 11:16:46 info: POST /user/initiatePremiumSubscription [32m200 765.327 ms - 203
+2023-11-27 11:17:21 error: 404 - route not found - /user/confirmPremiumSubscription - GET - ::1
+2023-11-27 11:17:21 info: GET /user/confirmPremiumSubscription [33m404 3.318 ms - 57
+2023-11-27 11:17:27 info: POST /user/confirmPremiumSubscription [33m400 633.760 ms - 39
+2023-11-27 11:17:31 info: POST /user/confirmPremiumSubscription [32m200 841.823 ms - 956
+2023-11-27 11:18:34 info: POST /user/confirmPremiumSubscription [33m400 651.199 ms - 39
+2023-11-27 11:18:36 info: POST /user/confirmPremiumSubscription [33m400 646.513 ms - 39
+2023-11-27 11:18:39 info: POST /user/confirmPremiumSubscription [32m200 1645.800 ms - 956
+2023-11-27 11:18:49 info: POST /user/confirmPremiumSubscription [32m200 716.060 ms - 956
+2023-11-27 11:19:22 info: POST /user/confirmPremiumSubscription [33m400 721.614 ms - 39
+2023-11-27 11:19:31 info: POST /user/confirmPremiumSubscription [32m200 695.710 ms - 1465
+2023-11-27 11:19:58 info: POST /user/initiatePremiumSubscription [32m200 644.392 ms - 77
+2023-11-27 11:20:01 info: POST /user/initiatePremiumSubscription [32m200 948.890 ms - 179
+2023-11-27 11:20:41 info: POST /user/confirmPremiumSubscription [33m400 673.103 ms - 39
+2023-11-27 11:20:46 info: POST /user/confirmPremiumSubscription [33m400 1107.869 ms - 39
+2023-11-27 11:20:47 info: POST /user/confirmPremiumSubscription [33m400 667.037 ms - 39
+2023-11-27 11:20:49 info: POST /user/confirmPremiumSubscription [33m400 642.229 ms - 39
+2023-11-27 11:20:57 info: POST /user/confirmPremiumSubscription [33m400 636.694 ms - 39
+2023-11-27 11:20:59 info: POST /user/confirmPremiumSubscription [33m400 675.819 ms - 39
+2023-11-27 11:21:01 info: POST /user/confirmPremiumSubscription [32m200 751.881 ms - 1440
+2023-11-27 11:21:51 info: POST /user/initiatePremiumSubscription [32m200 697.874 ms - 77
+2023-11-27 11:21:53 info: POST /user/initiatePremiumSubscription [32m200 681.152 ms - 77
+2023-11-27 11:21:55 info: POST /user/initiatePremiumSubscription [32m200 904.923 ms - 184
+2023-11-27 11:22:08 info: POST /user/confirmPremiumSubscription [33m400 766.903 ms - 39
+2023-11-27 11:22:10 info: POST /user/confirmPremiumSubscription [32m200 802.548 ms - 936
+2023-11-27 11:23:27 info: POST /user/confirmPremiumSubscription [33m400 7692.888 ms - 39
+2023-11-27 11:23:30 info: POST /user/confirmPremiumSubscription [32m200 700.215 ms - 936
+2023-11-27 11:24:04 info: POST /user/confirmPremiumSubscription [33m400 1599.031 ms - 39
+2023-11-27 11:24:07 info: POST /user/confirmPremiumSubscription [32m200 748.157 ms - 936
+2023-11-27 11:24:52 info: POST /user/confirmPremiumSubscription [32m200 777.243 ms - 1443
+2023-11-27 11:30:42 info: GET /user/confirmPremiumSubscription/hdhdhdh [32m200 1028.307 ms - 1443
+2023-11-27 11:31:31 info: GET /user/confirmPremiumSubscription/hdhdhdh [33m400 683.166 ms - 39
+2023-11-27 11:31:35 info: GET /user/confirmPremiumSubscription/hdhdhdh [32m200 1072.226 ms - 1443
+2023-11-27 11:39:42 error: 404 - Please authenticate - /user/initiatePremiumSubscription - POST - ::1
+2023-11-27 11:39:42 info: POST /user/initiatePremiumSubscription [33m404 10.048 ms - 61
+2023-11-27 11:39:55 info: POST /user/register [32m200 506.250 ms - 261
+2023-11-27 11:40:54 info: POST /user/initiatePremiumSubscription [32m200 967.377 ms - 185
+2023-11-27 11:41:15 info: GET /user/confirmPremiumSubscription/hdhdhdsh [33m400 1999.916 ms - 948
+2023-11-27 11:41:44 info: GET /user/confirmPremiumSubscription/hdhdhdsh [33m400 690.555 ms - 39
+2023-11-27 11:41:47 info: GET /user/confirmPremiumSubscription/hdhdhdsh [32m200 932.424 ms - 1459
+2023-11-27 11:41:58 info: GET /user/profile [32m200 153.129 ms - 248
+2023-11-27 11:56:58 info: GET /staff/get-staffs [32m200 1024.706 ms - 558839
+2023-11-27 11:59:11 info: GET /staff/get-staffs [32m200 1323.382 ms - 3161
+2023-11-27 11:59:32 info: GET /staff/get-staffs [32m200 1038.754 ms - 3161
+2023-11-27 12:00:30 info: GET /staff/get-active-staffs [32m200 252.106 ms - 2
+2023-11-27 12:16:59 info: GET /staff/get-specialists/farmer [32m200 1466.949 ms - 2
+2023-11-27 12:17:07 info: GET /staff/get-specialists/Farmer [32m200 1124.916 ms - 711
+2023-11-27 12:18:46 info: GET /staff/get-specialists/farmer [32m200 2993.669 ms - 711
+2023-11-27 12:52:49 info: GET /staff/get-staffs [32m200 1002.626 ms - 3308
+2023-11-27 12:53:17 info: POST /user/connectUserWithDoctor [32m200 795.109 ms - 30
+2023-11-27 13:06:57 info: POST /staff/login [32m200 491.606 ms - 676
+2023-11-27 13:07:29 error: 401 - Invalid token - /user/connectUserWithDoctor - POST - ::1
+2023-11-27 13:07:29 info: POST /user/connectUserWithDoctor [33m401 258.261 ms - 279
+2023-11-27 13:08:26 info: POST /user/login [32m200 461.503 ms - 250
+2023-11-27 13:09:06 error: 400 - Become a premium subscriber to enjoy this feature - /user/connectUserWithDoctor - POST - ::1
+2023-11-27 13:09:06 info: POST /user/connectUserWithDoctor [33m400 380.844 ms - 351
+2023-11-27 13:09:41 info: POST /user/initiatePremiumSubscription [32m200 1255.419 ms - 187
+2023-11-27 13:10:16 error: 404 - route not found - /user/confirmPremiumSubscription/hdhjjsdhdh - POST - ::1
+2023-11-27 13:10:16 info: POST /user/confirmPremiumSubscription/hdhjjsdhdh [33m404 3.150 ms - 57
+2023-11-27 13:10:30 error: 404 - route not found - /user/confirmPremiumSubscription/ - POST - ::1
+2023-11-27 13:10:30 info: POST /user/confirmPremiumSubscription/ [33m404 2.741 ms - 57
+2023-11-27 13:11:19 error: 404 - route not found - /user/confirmPremiumSubscription/hdhjjsdhdh - POST - ::1
+2023-11-27 13:11:19 info: POST /user/confirmPremiumSubscription/hdhjjsdhdh [33m404 2.313 ms - 57
+2023-11-27 13:11:40 info: GET /user/confirmPremiumSubscription/hdhjjsdhdh [33m400 700.272 ms - 39
+2023-11-27 13:11:46 info: GET /user/confirmPremiumSubscription/hdhjjsdhdh [32m200 1062.582 ms - 1460
+2023-11-27 13:11:55 info: POST /user/connectUserWithDoctor [32m200 424.567 ms - 30
+2023-11-27 13:12:08 info: POST /staff/login [32m200 466.434 ms - 881
+2023-11-27 13:15:06 info: POST /user/login [32m200 693.671 ms - 250
+2023-11-27 13:15:19 info: POST /user/connectUserWithDoctor [32m200 637.169 ms - 30
+2023-11-27 13:15:25 info: POST /staff/login [32m200 373.529 ms - 1112
+2023-11-27 13:19:23 info: POST /user/login [32m200 477.524 ms - 250
+2023-11-27 13:19:42 info: POST /staff/login [32m200 409.884 ms - 1317
+2023-11-27 13:20:30 info: POST /staff/login [32m200 415.407 ms - 1522
+2023-11-27 13:23:28 info: GET /staff/view-pending-patients [32m200 7548.724 ms - 4
+2023-11-27 13:24:02 info: GET /staff/view-pending-patients [32m200 379.369 ms - 4
+2023-11-27 13:46:10 info: GET /staff/view-pending-patients [32m200 265.904 ms - 4
+2023-11-27 13:48:31 info: GET /staff/view-pending-patients [32m200 528.265 ms - 252
+2023-11-27 13:49:19 error: 500 - User is not your patient - /staff/apporve-pending-patients - POST - ::1
+2023-11-27 13:49:19 info: POST /staff/apporve-pending-patients [31m500 443.847 ms - 308
+2023-11-27 13:55:28 error: 500 - User is not your patient - /staff/apporve-pending-patients - POST - ::1
+2023-11-27 13:55:28 info: POST /staff/apporve-pending-patients [31m500 439.444 ms - 308
+2023-11-27 13:57:17 error: 500 - Invalid status code: [ new ObjectId("6563b96ea97ad36f3472b54e") ] - /staff/apporve-pending-patients - POST - ::1
+2023-11-27 13:57:17 info: POST /staff/apporve-pending-patients [31m500 531.396 ms - 1169
+2023-11-27 14:00:20 error: 500 - boolean false is not iterable (cannot read property Symbol(Symbol.iterator)) - /staff/apporve-pending-patients - POST - ::1
+2023-11-27 14:00:20 info: POST /staff/apporve-pending-patients [31m500 409.928 ms - 451
+2023-11-27 14:04:12 error: 500 - User is not in your pending patients list - /staff/apporve-pending-patients - POST - ::1
+2023-11-27 14:04:12 info: POST /staff/apporve-pending-patients [31m500 1583.979 ms - 342
+2023-11-27 14:04:42 error: 500 - User is not in your pending patients list - /staff/apporve-pending-patients - POST - ::1
+2023-11-27 14:04:42 info: POST /staff/apporve-pending-patients [31m500 355.638 ms - 342
+2023-11-27 14:04:53 info: GET /staff/view-pending-patients [32m200 153.760 ms - 2
+2023-11-27 14:04:59 info: GET /staff/view-pending-patients [32m200 284.741 ms - 2
+2023-11-27 14:05:29 info: POST /user/register [32m200 807.129 ms - 263
+2023-11-27 14:06:02 info: POST /user/initiatePremiumSubscription [32m200 1116.407 ms - 180
+2023-11-27 14:06:35 info: GET /user/confirmPremiumSubscription/phj [33m400 728.220 ms - 39
+2023-11-27 14:06:42 info: GET /user/confirmPremiumSubscription/phj [33m400 628.436 ms - 39
+2023-11-27 14:06:49 info: GET /user/confirmPremiumSubscription/phj [33m400 703.532 ms - 39
+2023-11-27 14:06:53 info: GET /user/confirmPremiumSubscription/phj [32m200 1059.039 ms - 1455
+2023-11-27 14:07:17 info: POST /user/connectUserWithDoctor [32m200 594.991 ms - 30
+2023-11-27 14:07:26 info: POST /staff/login [32m200 429.567 ms - 1727
+2023-11-27 14:08:00 info: POST /user/login [32m200 345.084 ms - 251
+2023-11-27 14:08:09 info: POST /staff/login [32m200 420.604 ms - 1932
+2023-11-27 14:08:16 info: POST /staff/apporve-pending-patients [32m200 486.133 ms - 122
+2023-11-27 14:10:31 info: GET /staff/view-pending-patients [32m200 565.736 ms - 253
+2023-11-27 14:10:39 info: POST /staff/apporve-pending-patients [32m200 765.639 ms - 123
+2023-11-27 14:10:58 info: POST /user/register [32m200 507.999 ms - 264
+2023-11-27 14:11:08 info: POST /user/initiatePremiumSubscription [32m200 790.002 ms - 77
+2023-11-27 14:11:13 info: POST /user/initiatePremiumSubscription [32m200 1548.795 ms - 181
+2023-11-27 14:11:40 info: GET /user/confirmPremiumSubscription/phj [33m400 721.780 ms - 39
+2023-11-27 14:11:43 info: GET /user/confirmPremiumSubscription/phj [33m400 735.831 ms - 39
+2023-11-27 14:11:45 info: GET /user/confirmPremiumSubscription/phj [33m400 778.161 ms - 39
+2023-11-27 14:11:48 info: GET /user/confirmPremiumSubscription/phj [32m200 943.145 ms - 1455
+2023-11-27 14:12:02 info: GET /user/confirmPremiumSubscription/ssdf [33m400 717.898 ms - 39
+2023-11-27 14:12:05 info: GET /user/confirmPremiumSubscription/ssdf [33m400 755.881 ms - 1510
+2023-11-27 14:12:14 info: POST /user/connectUserWithDoctor [32m200 564.059 ms - 30
+2023-11-27 14:12:17 info: POST /user/connectUserWithDoctor [32m200 437.776 ms - 30
+2023-11-27 14:12:58 info: GET /user/profile [32m200 3549.936 ms - 269
+2023-11-27 14:17:01 info: POST /user/register [32m200 753.834 ms - 283
+2023-11-27 14:17:18 info: POST /user/initiatePremiumSubscription [32m200 987.882 ms - 77
+2023-11-27 14:17:23 info: POST /user/initiatePremiumSubscription [32m200 2602.128 ms - 181
+2023-11-27 14:17:40 info: GET /user/confirmPremiumSubscription/sbdg [33m400 685.103 ms - 947
+2023-11-27 14:17:44 info: GET /user/confirmPremiumSubscription/sbdg [33m400 637.806 ms - 39
+2023-11-27 14:17:47 info: GET /user/confirmPremiumSubscription/sbdg [33m400 962.547 ms - 947
+2023-11-27 14:17:50 info: GET /user/confirmPremiumSubscription/sbdg [33m400 774.813 ms - 39
+2023-11-27 14:17:52 info: GET /user/confirmPremiumSubscription/sbdg [33m400 831.646 ms - 39
+2023-11-27 14:17:55 info: GET /user/confirmPremiumSubscription/sbdg [33m400 692.830 ms - 39
+2023-11-27 14:17:57 info: GET /user/confirmPremiumSubscription/sbdg [33m400 657.085 ms - 39
+2023-11-27 14:17:59 info: GET /user/confirmPremiumSubscription/sbdg [33m400 752.223 ms - 39
+2023-11-27 14:18:13 info: GET /user/confirmPremiumSubscription/sbdg [33m400 12733.521 ms - 947
+2023-11-27 14:18:52 info: GET /user/confirmPremiumSubscription/sbdg [33m400 764.694 ms - 39
+2023-11-27 14:18:54 info: GET /user/confirmPremiumSubscription/sbdg [33m400 677.625 ms - 39
+2023-11-27 14:18:57 info: GET /user/confirmPremiumSubscription/sbdg [33m400 782.988 ms - 1392
+2023-11-27 14:18:59 info: GET /user/confirmPremiumSubscription/sbdg [33m400 760.187 ms - 1392
+2023-11-27 14:19:03 info: GET /user/confirmPremiumSubscription/sbdg [33m400 1052.716 ms - 39
+2023-11-27 14:19:13 info: GET /user/confirmPremiumSubscription/sbdg [32m200 1116.314 ms - 1581
+2023-11-27 14:20:09 info: POST /user/register [32m200 657.589 ms - 284
+2023-11-27 14:20:20 info: POST /user/initiatePremiumSubscription [32m200 804.558 ms - 77
+2023-11-27 14:20:23 info: POST /user/initiatePremiumSubscription [32m200 779.021 ms - 77
+2023-11-27 14:20:26 info: POST /user/initiatePremiumSubscription [32m200 813.146 ms - 77
+2023-11-27 14:20:29 info: POST /user/initiatePremiumSubscription [32m200 886.868 ms - 77
+2023-11-27 14:20:31 info: POST /user/initiatePremiumSubscription [32m200 666.785 ms - 77
+2023-11-27 14:20:33 info: POST /user/initiatePremiumSubscription [32m200 666.580 ms - 77
+2023-11-27 14:20:37 info: POST /user/initiatePremiumSubscription [32m200 663.573 ms - 77
+2023-11-27 14:20:40 info: POST /user/initiatePremiumSubscription [32m200 1075.097 ms - 183
+2023-11-27 14:21:05 info: GET /user/confirmPremiumSubscription/dfffff [33m400 872.262 ms - 1394
+2023-11-27 14:21:08 info: GET /user/confirmPremiumSubscription/dfffff [33m400 841.957 ms - 39
+2023-11-27 14:21:10 info: GET /user/confirmPremiumSubscription/dfffff [33m400 761.430 ms - 39
+2023-11-27 14:21:12 info: GET /user/confirmPremiumSubscription/dfffff [33m400 720.935 ms - 39
+2023-11-27 14:21:15 info: GET /user/confirmPremiumSubscription/dfffff [33m400 804.163 ms - 39
+2023-11-27 14:21:19 error: 400 - Become a premium subscriber to enjoy this feature - /user/connectUserWithDoctor - POST - ::1
+2023-11-27 14:21:19 info: POST /user/connectUserWithDoctor [33m400 340.863 ms - 351
+2023-11-27 14:21:33 error: 400 - Become a premium subscriber to enjoy this feature - /user/connectUserWithDoctor - POST - ::1
+2023-11-27 14:21:33 info: POST /user/connectUserWithDoctor [33m400 289.148 ms - 351
+2023-11-27 14:21:36 error: 400 - Become a premium subscriber to enjoy this feature - /user/connectUserWithDoctor - POST - ::1
+2023-11-27 14:21:36 info: POST /user/connectUserWithDoctor [33m400 290.917 ms - 351
+2023-11-27 14:21:38 error: 400 - Become a premium subscriber to enjoy this feature - /user/connectUserWithDoctor - POST - ::1
+2023-11-27 14:21:38 info: POST /user/connectUserWithDoctor [33m400 372.743 ms - 351
+2023-11-27 14:21:40 error: 400 - Become a premium subscriber to enjoy this feature - /user/connectUserWithDoctor - POST - ::1
+2023-11-27 14:21:40 info: POST /user/connectUserWithDoctor [33m400 401.055 ms - 351
+2023-11-27 14:21:45 info: GET /user/confirmPremiumSubscription/dfffff [33m400 784.379 ms - 39
+2023-11-27 14:21:47 info: GET /user/confirmPremiumSubscription/dfffff [33m400 758.662 ms - 39
+2023-11-27 14:21:52 info: GET /user/confirmPremiumSubscription/dfffff [32m200 1039.222 ms - 1583
+2023-11-27 14:21:57 info: POST /user/connectUserWithDoctor [32m200 709.873 ms - 30
+2023-11-27 14:22:14 info: POST /staff/login [32m200 380.145 ms - 2192
+2023-11-27 14:23:01 info: GET /staff/view-pending-patients [32m200 309.642 ms - 813
+2023-11-27 14:23:52 info: POST /staff/apporve-pending-patients [32m200 474.754 ms - 150
+2023-11-27 14:24:00 info: GET /staff/view-pending-patients [32m200 323.215 ms - 2
+2023-11-27 14:24:52 info: POST /user/register [32m200 608.873 ms - 285
+2023-11-27 14:25:07 info: POST /user/initiatePremiumSubscription [32m200 750.736 ms - 77
+2023-11-27 14:25:10 info: POST /user/initiatePremiumSubscription [32m200 1050.341 ms - 184
+2023-11-27 14:25:38 info: GET /user/confirmPremiumSubscription/dfffsff [33m400 673.189 ms - 39
+2023-11-27 14:25:40 info: GET /user/confirmPremiumSubscription/dfffsff [33m400 845.571 ms - 39
+2023-11-27 14:25:43 info: GET /user/confirmPremiumSubscription/dfffsff [33m400 812.118 ms - 39
+2023-11-27 14:25:46 info: GET /user/confirmPremiumSubscription/dfffsff [32m200 1074.637 ms - 1463
+2023-11-27 14:25:53 info: POST /user/connectUserWithDoctor [32m200 476.870 ms - 30
+2023-11-27 14:26:05 info: POST /user/register [32m200 478.953 ms - 286
+2023-11-27 14:26:13 info: POST /user/initiatePremiumSubscription [32m200 773.249 ms - 77
+2023-11-27 14:26:24 info: POST /user/initiatePremiumSubscription [32m200 774.869 ms - 77
+2023-11-27 14:26:31 info: POST /user/initiatePremiumSubscription [32m200 5124.058 ms - 185
+2023-11-27 14:26:56 info: GET /user/confirmPremiumSubscription/ssssbbdg [33m400 689.586 ms - 39
+2023-11-27 14:27:00 info: GET /user/confirmPremiumSubscription/ssssbbdg [33m400 1035.455 ms - 39
+2023-11-27 14:27:02 info: GET /user/confirmPremiumSubscription/ssssbbdg [32m200 905.112 ms - 1465
+2023-11-27 14:27:13 info: POST /user/connectUserWithDoctor [32m200 501.808 ms - 30
+2023-11-27 14:27:21 info: POST /staff/login [32m200 448.175 ms - 2370
+2023-11-27 14:27:29 info: GET /staff/view-pending-patients [32m200 297.311 ms - 548
+2023-11-27 14:27:42 info: POST /staff/apporve-pending-patients [32m200 662.147 ms - 177
+2023-11-27 14:29:34 info: POST /user/login [32m200 517.295 ms - 272
+2023-11-27 14:29:40 info: POST /user/connectUserWithDoctor [32m200 747.621 ms - 30
+2023-11-27 14:30:06 info: POST /user/login [32m200 414.662 ms - 271
+2023-11-27 14:30:11 info: POST /user/connectUserWithDoctor [32m200 569.852 ms - 30
+2023-11-27 14:30:17 info: POST /staff/login [32m200 378.983 ms - 2575
+2023-11-27 14:30:26 info: GET /staff/view-pending-patients [32m200 380.607 ms - 546
+2023-11-27 14:30:35 info: POST /staff/apporve-pending-patients [32m200 520.716 ms - 257
+2023-11-27 14:31:23 info: POST /staff/apporve-pending-patients [32m200 720.419 ms - 231
+2023-11-27 14:34:52 info: POST /user/login [32m200 1101.723 ms - 271
+2023-11-27 14:34:57 info: POST /user/connectUserWithDoctor [32m200 800.475 ms - 30
+2023-11-27 14:35:03 info: POST /user/login [32m200 380.677 ms - 272
+2023-11-27 14:35:10 info: POST /user/connectUserWithDoctor [32m200 449.119 ms - 30
+2023-11-27 14:35:16 info: POST /staff/login [32m200 599.258 ms - 2780
+2023-11-27 14:35:24 info: GET /staff/view-pending-patients [32m200 435.777 ms - 546
+2023-11-27 14:35:35 info: POST /staff/apporve-pending-patients [32m200 627.744 ms - 311
+2023-11-27 14:37:11 info: POST /staff/apporve-pending-patients [32m200 754.489 ms - 311
+2023-11-27 14:39:35 info: POST /user/login [32m200 523.434 ms - 272
+2023-11-27 14:39:41 error: 400 - Doctor not found! - /user/connectUserWithDoctor - POST - ::1
+2023-11-27 14:39:41 info: POST /user/connectUserWithDoctor [33m400 479.909 ms - 293
+2023-11-27 14:39:50 error: 400 - Doctor not found! - /user/connectUserWithDoctor - POST - ::1
+2023-11-27 14:39:50 info: POST /user/connectUserWithDoctor [33m400 773.502 ms - 293
+2023-11-27 14:39:54 info: POST /user/login [32m200 404.641 ms - 272
+2023-11-27 14:40:00 error: 400 - Doctor not found! - /user/connectUserWithDoctor - POST - ::1
+2023-11-27 14:40:00 info: POST /user/connectUserWithDoctor [33m400 457.279 ms - 293
+2023-11-27 14:40:21 info: POST /staff/register [32m200 792.186 ms - 493
+2023-11-27 14:40:36 info: POST /user/login [32m200 453.385 ms - 272
+2023-11-27 14:40:42 info: POST /user/connectUserWithDoctor [32m200 522.409 ms - 30
+2023-11-27 14:41:03 info: POST /staff/login [32m200 504.609 ms - 711
+2023-11-27 14:41:13 info: GET /staff/view-pending-patients [32m200 355.002 ms - 274
+2023-11-27 14:41:24 info: POST /staff/apporve-pending-patients [32m200 502.042 ms - 73
+2023-11-27 14:41:37 info: POST /user/login [32m200 467.365 ms - 272
+2023-11-27 14:41:41 info: POST /user/connectUserWithDoctor [32m200 460.413 ms - 30
+2023-11-27 14:41:53 info: POST /user/login [32m200 400.903 ms - 271
+2023-11-27 14:41:57 info: POST /user/connectUserWithDoctor [32m200 645.232 ms - 30
+2023-11-27 14:42:02 info: POST /staff/login [32m200 438.910 ms - 948
+2023-11-27 14:42:10 info: GET /staff/view-pending-patients [32m200 293.110 ms - 551
+2023-11-27 14:42:34 info: POST /staff/apporve-pending-patients [32m200 514.516 ms - 110
+2023-11-27 14:43:41 info: POST /user/login [32m200 490.811 ms - 271
+2023-11-27 14:43:45 info: POST /user/connectUserWithDoctor [32m200 629.982 ms - 30
+2023-11-27 14:43:54 info: POST /user/login [32m200 518.620 ms - 272
+2023-11-27 14:43:59 info: POST /user/connectUserWithDoctor [32m200 465.864 ms - 30
+2023-11-27 14:44:06 info: POST /staff/login [32m200 481.948 ms - 1163
+2023-11-27 14:44:19 info: GET /staff/view-pending-patients [32m200 1351.397 ms - 561
+2023-11-27 14:44:27 info: POST /staff/apporve-pending-patients [32m200 485.460 ms - 216
+2023-11-27 14:45:13 info: POST /staff/register [32m200 1036.905 ms - 494
+2023-11-27 14:45:23 info: POST /user/login [32m200 585.878 ms - 272
+2023-11-27 14:45:29 info: POST /user/connectUserWithDoctor [32m200 474.182 ms - 30
+2023-11-27 14:45:38 info: POST /user/login [32m200 462.595 ms - 271
+2023-11-27 14:45:43 info: POST /user/connectUserWithDoctor [32m200 704.619 ms - 30
+2023-11-27 14:46:02 info: POST /staff/login [32m200 766.341 ms - 739
+2023-11-27 14:46:08 info: GET /staff/view-pending-patients [32m200 360.363 ms - 546
+2023-11-27 14:46:18 info: POST /staff/apporve-pending-patients [32m200 660.713 ms - 132
+2023-11-27 14:48:02 info: POST /staff/apporve-pending-patients [32m200 711.926 ms - 122
+2023-11-27 14:49:34 info: POST /staff/apporve-pending-patients [32m200 576.636 ms - 123
+2023-11-27 14:50:15 info: POST /user/login [32m200 534.378 ms - 271
+2023-11-27 14:50:20 info: POST /user/connectUserWithDoctor [32m200 625.177 ms - 30
+2023-11-27 14:50:32 info: POST /user/login [32m200 426.330 ms - 272
+2023-11-27 14:50:37 info: POST /user/connectUserWithDoctor [32m200 491.664 ms - 30
+2023-11-27 14:50:42 info: POST /staff/login [32m200 365.412 ms - 971
+2023-11-27 14:51:11 info: POST /staff/apporve-pending-patients [32m200 690.109 ms - 203
+2023-11-27 14:51:29 info: POST /staff/apporve-pending-patients [32m200 463.335 ms - 203
+2023-11-27 14:51:49 info: POST /staff/apporve-pending-patients [32m200 513.479 ms - 257
+2023-11-27 14:52:51 info: POST /staff/apporve-pending-patients [32m200 2114.998 ms - 284
+2023-11-27 14:53:00 info: POST /staff/apporve-pending-patients [32m200 634.327 ms - 258
+2023-11-27 14:54:28 info: POST /user/login [32m200 469.141 ms - 273
+2023-11-27 14:54:35 error: 400 - Doctor not found! - /user/connectUserWithDoctor - POST - ::1
+2023-11-27 14:54:35 info: POST /user/connectUserWithDoctor [33m400 492.916 ms - 293
+2023-11-27 15:04:11 info: POST /staff/login [32m200 534.226 ms - 1097
+2023-11-27 15:04:23 info: POST /user/login [32m200 643.743 ms - 273
+2023-11-27 15:04:27 error: 400 - Doctor is occupied at the moment - /user/connectUserWithDoctor - POST - ::1
+2023-11-27 15:04:27 info: POST /user/connectUserWithDoctor [33m400 456.327 ms - 323
+2023-11-27 15:07:18 info: POST /user/register [32m200 668.899 ms - 288
+2023-11-27 15:07:43 info: POST /staff/register [32m200 751.080 ms - 496
+2023-11-27 15:07:58 info: POST /user/login [32m200 433.928 ms - 276
+2023-11-27 15:08:05 error: 400 - Become a premium subscriber to enjoy this feature - /user/connectUserWithDoctor - POST - ::1
+2023-11-27 15:08:05 info: POST /user/connectUserWithDoctor [33m400 432.458 ms - 351
+2023-11-27 15:08:13 info: POST /user/initiatePremiumSubscription [32m200 754.716 ms - 77
+2023-11-27 15:08:19 info: POST /user/initiatePremiumSubscription [32m200 975.986 ms - 188
+2023-11-27 15:08:45 info: GET /user/confirmPremiumSubscription/ssssbbddsdg [33m400 720.745 ms - 39
+2023-11-27 15:08:49 info: GET /user/confirmPremiumSubscription/ssssbbddsdg [33m400 766.151 ms - 39
+2023-11-27 15:08:53 info: GET /user/confirmPremiumSubscription/ssssbbddsdg [33m400 917.651 ms - 39
+2023-11-27 15:08:57 info: GET /user/confirmPremiumSubscription/ssssbbddsdg [33m400 764.073 ms - 39
+2023-11-27 15:09:00 info: GET /user/confirmPremiumSubscription/ssssbbddsdg [33m400 703.034 ms - 39
+2023-11-27 15:09:04 info: GET /user/confirmPremiumSubscription/ssssbbddsdg [33m400 745.513 ms - 39
+2023-11-27 15:09:07 info: GET /user/confirmPremiumSubscription/ssssbbddsdg [32m200 981.604 ms - 1468
+2023-11-27 15:09:16 info: POST /user/connectUserWithDoctor [32m200 837.474 ms - 30
+2023-11-27 15:09:40 info: POST /staff/login [32m200 354.576 ms - 714
+2023-11-27 15:09:51 info: POST /staff/apporve-pending-patients [32m200 483.307 ms - 54
+2023-11-27 15:09:59 info: GET /staff/view-pending-patients [32m200 161.623 ms - 2
+2023-11-27 15:10:08 info: POST /user/login [32m200 546.439 ms - 275
+2023-11-27 15:10:26 info: POST /user/login [32m200 340.285 ms - 275
+2023-11-27 15:12:08 info: POST /user/register [32m200 570.503 ms - 291
+2023-11-27 15:12:16 info: POST /user/login [32m200 380.657 ms - 279
+2023-11-27 15:12:25 info: POST /user/initiatePremiumSubscription [32m200 764.738 ms - 77
+2023-11-27 15:12:33 info: POST /user/initiatePremiumSubscription [32m200 4624.856 ms - 189
+2023-11-27 15:13:00 info: GET /user/confirmPremiumSubscription/ssssbbddssdg [33m400 898.239 ms - 39
+2023-11-27 15:13:04 info: GET /user/confirmPremiumSubscription/ssssbbddssdg [32m200 1044.355 ms - 1472
+2023-11-27 15:13:11 info: POST /user/connectUserWithDoctor [32m200 1068.703 ms - 30
+2023-11-27 15:13:16 info: POST /staff/login [32m200 568.831 ms - 919
+2023-11-27 15:13:35 info: POST /staff/apporve-pending-patients [32m200 710.593 ms - 54
+2023-11-27 15:13:43 info: POST /user/login [32m200 417.498 ms - 304
+2023-11-27 16:42:24 error: 500 - user is not defined - /user/register - POST - ::1
+2023-11-27 16:42:24 info: POST /user/register [31m500 28.224 ms - 1427
+2023-11-27 16:42:51 info: POST /user/register [32m200 631.871 ms - 355
+2023-11-27 16:47:35 info: POST /user/register [32m200 575.594 ms - 376
+2023-11-27 16:48:01 error: 400 - Please fill all the inputs - /user/verify/ea0ead8c97d6b9fd225c2d68b61f12618338508e - POST - ::1
+2023-11-27 16:48:01 info: POST /user/verify/ea0ead8c97d6b9fd225c2d68b61f12618338508e [33m400 5.333 ms - 1424
+2023-11-27 16:49:13 info: POST /user/verify/ea0ead8c97d6b9fd225c2d68b61f12618338508e [32m200 446.775 ms - 30
+2023-11-27 16:49:40 error: 400 - Please fill all the inputs - /user/login - POST - ::1
+2023-11-27 16:49:40 info: POST /user/login [33m400 5.745 ms - 1433
+2023-11-27 16:50:07 info: POST /user/verify/ea0ead8c97d6b9fd225c2d68b61f12618338508e [32m200 331.971 ms - 30
+2023-11-27 16:50:13 info: POST /user/verify/ea0ead8c97d6b9fd225c2d68b61f12618338508e [32m200 374.361 ms - 30
+2023-11-27 16:50:19 info: POST /user/login [32m200 411.623 ms - 364
+2023-11-27 16:51:23 info: POST /user/verify/ea0ead8c97d6b9fd225c2d68b61f12618338508e [32m200 401.262 ms - 30
+2023-11-27 16:51:46 info: POST /user/verify/ea0ead8c97d6b9fd225c2d68b61f12618338508e [32m200 405.336 ms - 331
+2023-11-27 16:52:21 info: POST /user/login [32m200 415.217 ms - 331
+2023-11-27 16:52:29 info: POST /user/verify/ea0ead8c97d6b9fd225c2d68b61f12618338508e [32m200 364.378 ms - 331
+2023-11-27 16:53:43 error: 400 - User already verified - /user/verify/ea0ead8c97d6b9fd225c2d68b61f12618338508e - POST - ::1
+2023-11-27 16:53:43 info: POST /user/verify/ea0ead8c97d6b9fd225c2d68b61f12618338508e [33m400 228.323 ms - 300
+2023-11-27 16:54:41 info: POST /user/register [32m200 623.963 ms - 377
+2023-11-27 16:54:51 error: 400 - User already verified - /user/verify/f7a8620d9b049554f301c14456c3de691d6e33f - POST - ::1
+2023-11-27 16:54:51 info: POST /user/verify/f7a8620d9b049554f301c14456c3de691d6e33f [33m400 196.136 ms - 300
+2023-11-27 16:55:00 error: 400 - User already verified - /user/verify/f7a8620d9b049554f301c14456c3de691d6e - POST - ::1
+2023-11-27 16:55:00 info: POST /user/verify/f7a8620d9b049554f301c14456c3de691d6e [33m400 749.992 ms - 300
+2023-11-27 16:55:35 error: 400 - User already verified - /user/verify/f7a8620d9b049554f301c14456c3de691d6e - POST - ::1
+2023-11-27 16:55:35 info: POST /user/verify/f7a8620d9b049554f301c14456c3de691d6e [33m400 3609.431 ms - 300
+2023-11-27 16:56:15 info: POST /user/verify/f7a8620d9b049554f301c14456c3de691d6e [32m200 385.160 ms - 331
+2023-11-27 16:56:26 info: POST /user/verify/f7a8620d9b049554f301c14456c3de691d6e33f8 [32m200 410.165 ms - 331
+2023-11-27 16:56:32 info: POST /user/verify/f7a8620d9b049554 [32m200 353.114 ms - 331
+2023-11-27 16:57:05 error: 404 - route not found - /user/verify - POST - ::1
+2023-11-27 16:57:05 info: POST /user/verify [33m404 10.557 ms - 57
+2023-11-27 16:57:12 error: 404 - route not found - /user/verify/ - POST - ::1
+2023-11-27 16:57:12 info: POST /user/verify/ [33m404 2.682 ms - 57
+2023-11-27 16:57:29 info: POST /user/verify/ [32m200 434.141 ms - 326
+2023-11-27 16:57:35 error: 400 - Invalid token or user not found. - /user/verify/ - POST - ::1
+2023-11-27 16:57:35 info: POST /user/verify/ [33m400 181.136 ms - 322
+2023-11-27 16:57:57 error: 400 - Invalid token or user not found. - /user/verify/ - POST - ::1
+2023-11-27 16:57:57 info: POST /user/verify/ [33m400 228.891 ms - 322
+2023-11-27 16:58:03 error: 400 - Invalid token or user not found. - /user/verify/ - POST - ::1
+2023-11-27 16:58:03 info: POST /user/verify/ [33m400 196.935 ms - 322
+2023-11-27 16:58:15 error: 400 - Invalid token or user not found. - /user/verify/ - POST - ::1
+2023-11-27 16:58:15 info: POST /user/verify/ [33m400 174.044 ms - 322
+2023-11-27 16:58:56 error: 400 - Invalid token or user not found. - /user/verify/ - POST - ::1
+2023-11-27 16:58:56 info: POST /user/verify/ [33m400 181.301 ms - 322
+2023-11-27 16:59:06 info: POST /user/register [32m200 585.684 ms - 378
+2023-11-27 16:59:19 error: 400 - Something went wrong - /user/verify/ - POST - ::1
+2023-11-27 16:59:19 info: POST /user/verify/ [33m400 170.694 ms - 298
+2023-11-27 16:59:36 info: POST /user/verify/ [32m200 457.060 ms - 327
+2023-11-27 16:59:42 error: 400 - Invalid token or user not found. - /user/verify/ - POST - ::1
+2023-11-27 16:59:42 info: POST /user/verify/ [33m400 173.724 ms - 322
+2023-11-27 17:03:24 error: 500 - Staff validation failed: email: Validator failed for path `email` with value `daviddddjoshnsssonssddgmail.com` - /staff/register - POST - ::1
+2023-11-27 17:03:24 info: POST /staff/register [31m500 434.914 ms - 753
+2023-11-27 17:03:36 info: POST /staff/register [32m200 599.237 ms - 553
+2023-11-27 17:04:31 info: POST /staff/register [32m200 643.016 ms - 584
+2023-11-27 17:05:16 info: POST /staff/verify [32m200 374.467 ms - 532
+2023-11-27 17:17:52 info: POST /user/register [32m200 547.631 ms - 353
+2023-11-27 17:20:37 info: POST /user/register [32m200 511.157 ms - 353
+2023-11-27 17:31:42 info: POST /user/register [32m200 537.147 ms - 349
+2023-11-27 17:32:51 info: POST /user/register [32m200 516.026 ms - 352
+2023-11-27 17:35:06 info: POST /user/register [32m200 514.453 ms - 353
+2023-11-27 17:36:41 info: POST /user/register [32m200 487.011 ms - 353
+2023-11-27 17:37:00 error: 404 - route not found - /user/verify?token=73e4f82c544161e67f117e13775cc37f9abd8376 - GET - ::ffff:127.0.0.1
+2023-11-27 17:37:00 info: GET /user/verify?token=73e4f82c544161e67f117e13775cc37f9abd8376 [33m404 6.875 ms - 57
+2023-11-27 17:41:27 error: 500 - url is not defined - /user/verify?token=73e4f82c544161e67f117e13775cc37f9abd8376 - POST - ::1
+2023-11-27 17:41:27 info: POST /user/verify?token=73e4f82c544161e67f117e13775cc37f9abd8376 [31m500 18.572 ms - 1426
+2023-11-27 17:42:00 error: 500 - url is not defined - /user/verify?token=73e4f82c544161e67f117e13775cc37f9abd8376 - POST - ::1
+2023-11-27 17:42:00 info: POST /user/verify?token=73e4f82c544161e67f117e13775cc37f9abd8376 [31m500 8.248 ms - 1426
+2023-11-27 17:42:21 error: 500 - url is not defined - /user/verify?token=73e4f82c544161e67f117e13775cc37f9abd8376 - POST - ::1
+2023-11-27 17:42:21 info: POST /user/verify?token=73e4f82c544161e67f117e13775cc37f9abd8376 [31m500 3.385 ms - 1426
+2023-11-27 17:45:58 error: 500 - Cast to string failed for value "{ token: '73e4f82c544161e67f117e13775cc37f9abd8376' }" (type Object) at path "verificationToken" for model "User" - /user/verify/73e4f82c544161e67f117e13775cc37f9abd8376 - POST - ::1
+2023-11-27 17:45:58 info: POST /user/verify/73e4f82c544161e67f117e13775cc37f9abd8376 [31m500 25.627 ms - 1662

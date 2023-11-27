@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import AppError from "../common/utils/appError.js";
 import { ENVIRONMENT } from "../common/config/environment.js";
-import UserSchema from "./userSchema.js";
+import UserSchema, { premiumSubscribers } from "./userSchema.js";
 
 UserSchema.methods.toJSON = function () {
   const user = this;
@@ -11,7 +11,7 @@ UserSchema.methods.toJSON = function () {
 
   delete userObject.password;
   delete userObject.tokens;
-  delete userObject.isPremium;
+  // delete userObject.isPremium;
   return userObject;
 };
 
@@ -60,9 +60,13 @@ UserSchema.methods.generateAuthToken = async function () {
   //     throw new AppError("No user", 400)
   //   }
 
-  const token = jwt.sign({ _id: user._id.toString() }, ENVIRONMENT.APP.SECRET, {
-    expiresIn: "1d",
-  });
+  const token = jwt.sign(
+    { _id: user._id.toString(), type: "user" },
+    ENVIRONMENT.APP.SECRET,
+    {
+      expiresIn: "1d",
+    }
+  );
 
   user.tokens = user.tokens.concat({ token });
 
@@ -81,5 +85,6 @@ UserSchema.pre("save", async function (next) {
 });
 
 const User = mongoose.model("User", UserSchema);
+export const PremiumSubscribers = mongoose.model("PremiumSubscribebrs", premiumSubscribers);
 
 export default User;
