@@ -7,6 +7,8 @@ import https from "https";
 import { ENVIRONMENT } from "../common/config/environment.js";
 import { generateToken } from "../common/utils/helper.js";
 import nodemailer from "nodemailer";
+import { log } from "console";
+import Chat from "../models/ChatModel.js";
 
 // const Paystack = import("paystack");
 // const sdk = await Paystack(process.env.PAYSTACK_PUBLIC_KEY);
@@ -50,26 +52,26 @@ export const registerUser = catchAsync(async (req, res) => {
 
   newUser.verificationToken = generateToken();
 
-  console.log(newUser.verificationToken);
+  // console.log(newUser.verificationToken);
 
-  // Step 2: Generate the verification link and compose the email
-  const verificationLink = `http://localhost:8000/user/verify?token=${newUser.verificationToken}`;
+  // // Step 2: Generate the verification link and compose the email
+  // const verificationLink = `http://localhost:8000/user/verify?token=${newUser.verificationToken}`;
 
-  const mailOptions = {
-    from: "your_email@gmail.com",
-    to: newUser.email,
-    subject: "Account Verification",
-    text: `Click the following link to verify your account: ${verificationLink}`,
-  };
+  // const mailOptions = {
+  //   from: "your_email@gmail.com",
+  //   to: newUser.email,
+  //   subject: "Account Verification",
+  //   text: `Click the following link to verify your account: ${verificationLink}`,
+  // };
 
-  // Step 3: Send the email
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      console.error(error);
-    } else {
-      console.log("Email sent: " + info.response);
-    }
-  });
+  // // Step 3: Send the email
+  // transporter.sendMail(mailOptions, (error, info) => {
+  //   if (error) {
+  //     console.error(error);
+  //   } else {
+  //     console.log("Email sent: " + info.response);
+  //   }
+  // });
 
   // REMEMBER TO MAKE SURE THE ACCOUNT IS USELESS WITHOUT VERIFICATION
 
@@ -83,7 +85,7 @@ export const registerUser = catchAsync(async (req, res) => {
   const token = await newUser.generateAuthToken();
 
   // Store the token in a cookie
-  res.cookie("auth", token, { httpOnly: true });
+  await res.cookie("auth", token, { httpOnly: true });
   await newUser.save();
 
   res.status(200).send({ newUser });
@@ -94,8 +96,6 @@ export const verifyAccount = catchAsync(async (req, res) => {
 
   // Find the user by the verification token
   const user = await User.findOne({ verificationToken: token });
-
-  console.log(user);
 
   if (!user) {
     throw new AppError("Invalid token or user not found.", 400);
@@ -309,7 +309,35 @@ export const ConnectUserWithDoctor = catchAsync(async (req, res) => {
   // Save the changes to the database
   await foundStaff.save();
 
-  console.log(foundStaff.pendingPatients);
-
   res.status(200).send(`Dr. ${foundStaff.lastName} has been notified.`);
 });
+
+export const allUsers = catchAsync(async (req, res) => {
+  const keyword = req.query.search
+    ? {
+        $or: [
+          { firstName: { $regex: req.query.search, options: "i" } },
+          { email: { $regex: req.query.search, options: "i" } },
+          { lastName: { $regex: req.query.search, options: "i" } },
+        ],
+      }
+    : {};
+
+  const users = await User.find(keyword).find({ _id: { $ne: req.user._id } });
+
+  res.send(users);
+});
+
+export const joinCommunity = catchAsync(async (req,res) => {
+  const { communityId } = req.body;
+  const user = req.user;
+
+
+  const foundChat = await Chat.findOne({_id : communityId});
+
+  if(!foundChat) {
+    throw new AppError("Community not found", 400);
+  }
+
+  
+})

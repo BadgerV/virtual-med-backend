@@ -1,13 +1,13 @@
 import mongoose from "mongoose";
 import validator from "validator";
 
-const referenceSchema = new mongoose.Schema(
-  {
-    nameOfReference: String,
-    numberOfReference: String,
-  },
-  { _id: false } // Disable _id for the professionalReferences subdocument
-);
+// const referenceSchema = new mongoose.Schema(
+//   {
+//     nameOfReference: String,
+//     numberOfReference: String,
+//   },
+//   { _id: false } // Disable _id for the professionalReferences subdocument
+// );
 
 const tokenSchema = new mongoose.Schema(
   {
@@ -71,20 +71,29 @@ const StaffSchema = new mongoose.Schema(
         message: "Age must be a positive integer",
       },
     },
+    phoneNumber: {
+      type: String,
+      required: true,
+      // required: true,
+    },
     medicalLisense: {
-      type: Buffer,
+      type: String,
+      required: true,
     },
     boardCertification: {
-      type: Buffer,
+      type: String,
+      required: true,
     },
     speciality: {
       type: String,
     },
     passportImage: {
-      type: Buffer,
+      type: String,
+      required: true,
     },
     location: {
       type: String,
+      required: true,
     },
     isActive: {
       type: String,
@@ -92,10 +101,7 @@ const StaffSchema = new mongoose.Schema(
     },
     hourlyPrice: {
       type: Number,
-    },
-    hasProvidedCredentials: {
-      type: Boolean,
-      default: false,
+      required: true,
     },
     accountType: {
       type: String,
@@ -103,24 +109,62 @@ const StaffSchema = new mongoose.Schema(
       immutable: true, // Make the field immutable
     },
     proofOfIdentity: {
-      type: Buffer,
+      type: String,
+      required: true,
     },
-    age: {
-      type: Number,
+    dateOfBirth: {
+      required: true,
+      type: Date,
     },
     professionalMemberShip: {
       type: String,
     },
-    professionalReferences: [referenceSchema],
+    major: {
+      type: String,
+      required: true,
+    },
+    degree: {
+      type: String,
+      required: true,
+    },
+    university: {
+      type: String,
+      required: true,
+    },
+    graduationDate: {
+      type: Date,
+      required: true,
+    },
+    rating: {
+      type: Number,
+    },
+    noOfRatings: {
+      type: Number,
+    },
     tokens: [tokenSchema],
 
     verificationToken: {
       type: String,
       default: "Nothing yet",
     },
+    CV: {
+      type: String,
+      required: true,
+    },
     isVerified: {
       type: Boolean,
       default: false,
+    },
+    degreeCertificate: {
+      type: String,
+      required: true,
+    },
+    POMI: {
+      type: String,
+      required: true,
+    },
+    aboutMe: {
+      type: String,
       required: true,
     },
     currentPatients: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],

@@ -35,6 +35,9 @@ const UserSchema = new mongoose.Schema(
         message: "Name can only contain letters",
       },
     },
+    nickName: {
+      type: String,
+    },
     email: {
       type: String,
       required: true,
@@ -62,9 +65,13 @@ const UserSchema = new mongoose.Schema(
           "Password must be strong with at least 8 characters, including uppercase, lowercase, and numbers",
       },
     },
+    phoneNumber: {
+      type: String,
+      // required: true,
+    },
     isPremium: {
       type: Boolean,
-      default: false,
+      default: true,
     },
     tokens: [tokenSchema],
     accountType: {
@@ -74,7 +81,7 @@ const UserSchema = new mongoose.Schema(
     },
     verificationToken: {
       type: String,
-      default : "Nothing yet"
+      default: "Nothing yet",
     },
     isVerified: {
       type: Boolean,
@@ -82,6 +89,14 @@ const UserSchema = new mongoose.Schema(
       required: true,
     },
     assignedDoctors: [{ type: mongoose.Schema.Types.ObjectId, ref: "Staff" }],
+
+    paystackRef: {
+      type: String,
+    },
+    isAdmin: {
+      type: Boolean,
+      default: false,
+    },
   },
   { timestamps: true }
 );

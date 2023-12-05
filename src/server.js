@@ -13,11 +13,26 @@ import { stream } from "./common/utils/logger.js";
 import morgan from "morgan";
 import { connectDb } from "./common/config/database.js";
 import cookieParser from "cookie-parser";
+import { Server as SocketIOServer } from "socket.io";
+import http from "http";
 
 /**
  * Default app configurations
  */
 const app = express();
+
+const server = http.createServer(app);
+
+const io = new SocketIOServer(server, {
+  cors: {
+    origin: "http://localhost:5173",
+  },
+});
+
+io.on("connection", (socket) => {
+  console.log("Connected to socket.io");
+});
+
 const port = ENVIRONMENT.APP.PORT;
 const appName = ENVIRONMENT.APP.NAME;
 
@@ -25,11 +40,21 @@ const appName = ENVIRONMENT.APP.NAME;
  * App Security
  */
 app.use(helmet());
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    credentials: true,
+  })
+);
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
 app.disable("x-powered-by");
-app.use(cookieParser(ENVIRONMENT.APP.SECRET));
+app.use(
+  cookieParser({
+    secret: ENVIRONMENT.APP.SECRET,
+    sameSite: "None", // Set SameSite to None for cross-origin cookies
+  })
+);
 
 /**
  * Logger Middleware

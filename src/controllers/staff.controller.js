@@ -3,6 +3,7 @@ import User from "../models/UserModel.js";
 import { catchAsync } from "../common/utils/errorHandler.js";
 import { generateToken, isNullOrEmpty } from "../common/utils/helper.js";
 import AppError from "../common/utils/appError.js";
+import Chat from "../models/ChatModel.js";
 
 export const registerStaff = catchAsync(async (req, res) => {
   const { firstName, lastName, email, password } = req.body;
@@ -134,9 +135,24 @@ export const getStaff = catchAsync(async (req, res) => {
 });
 
 export const getStaffs = catchAsync(async (req, res) => {
-  const staffs = await Staff.find({});
+  const staffs = await Staff.find({
+    // Add other criteria as needed
+    passportImage: { $exists: true },
+    // Add more criteria here
+  });
 
   res.status(200).send(staffs);
+});
+
+export const getOneStaff = catchAsync(async (req, res) => {
+  console.log(req.query.id)
+  const staff = await Staff.findOne({
+    _id: req.query.id,
+    // Add other criteria as needed
+    // Add more criteria here
+  });
+
+  res.status(200).send(staff);
 });
 
 export const getActiveStaffs = catchAsync(async (req, res) => {
@@ -189,10 +205,27 @@ export const approvePatient = catchAsync(async (req, res) => {
   await staff.save();
   await user.save();
 
-  // Return an object with currentPatients and pendingPatients
-  res
-    .status(200)
-    .send(`${user.firstName} has been added to you patient list successfully`);
+  var chatData = {
+    chatName: "sender",
+    isCommunity: false,
+    users: [user._id],
+    staffMembers: [staff._id],
+  };
+  try {
+    const createdChat = await Chat.create(chatData);
+
+    const FullChat = await Chat.findOne({
+      _id: createdChat._id,
+    })
+      .populate("users")
+      .populate("staffMembers");
+
+    console.log(FullChat);
+
+    res.status(200).send(FullChat);
+  } catch (error) {
+    throw new AppError(error.message, 400);
+  }
 });
 
 export const viewPendingPatients = catchAsync(async (req, res) => {
