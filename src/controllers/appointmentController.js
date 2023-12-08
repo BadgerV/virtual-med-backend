@@ -9,6 +9,8 @@ import { ENVIRONMENT } from "../common/config/environment.js";
 import https from "https";
 import { calculateTotalCost } from "../common/utils/helper.js";
 import Chat from "../models/ChatModel.js";
+import Notification from "../models/NotificationSchema.js";
+import moment from "moment";
 
 export const fetchAppointments = catchAsync(async (req, res) => {
   const isUser = req.user ? true : false;
@@ -54,12 +56,41 @@ export const fetchAppointments = catchAsync(async (req, res) => {
   }
 });
 
+const isDoctorAvailable = (doctorAvailability, appointmentTime) => {
+  const requestedTime = new Date(appointmentTime);
+
+  for (const slot of doctorAvailability) {
+    const slotStart = new Date(slot.startTime);
+    const slotEnd = new Date(slot.endTime);
+
+    if (requestedTime >= slotStart && requestedTime <= slotEnd) {
+      // Appointment time overlaps with an existing slot
+      return true;
+    }
+  }
+
+  // No overlapping slot found, doctor is available
+  return false;
+};
+
 const checkAvailability = async (doctorId, appointmentTime, duration) => {
   if (duration < 30 || duration > 180) {
     throw new Error(
       "Appointment cannot be greater then 3 hours or less than 30 minutes"
     );
   }
+
+  const foundDoctor = await Staff.findOne({ _id: doctorId });
+
+  const doctorAvail = isDoctorAvailable(
+    foundDoctor.availability,
+    appointmentTime
+  );
+
+  if (!doctorAvail) {
+    throw new Error("Doctor not available", 400);
+  }
+
   const existingAppointments = await Appointment.find({ doctorId });
 
   const appointmentEndTime = new Date(
@@ -96,6 +127,7 @@ const payStack = {
         email: email,
         amount: price * 100,
         reference: reference,
+        callback_url: "https://6a76-105-113-87-154.ngrok-free.app/verify",
       });
       // options
       const options = {
@@ -208,7 +240,7 @@ export const makeAppointment = catchAsync(async (req, res) => {
     throw new AppError("Please fill out all the fields");
   }
   const realAppointmentTime = new Date(appointmentTime);
-  console.log(realAppointmentTime);
+  // console.log(realAppointmentTime);
 
   const availability = await checkAvailability(
     doctorId,
@@ -221,9 +253,6 @@ export const makeAppointment = catchAsync(async (req, res) => {
   }
 
   const paymentReference = uuidv4();
-
-  req.user.paystackRef = paymentReference;
-  await req.user.save();
 
   payStack.acceptPayment(req, res, paymentReference, totalCost, req.user.email);
 
@@ -240,7 +269,8 @@ export const makeAppointment = catchAsync(async (req, res) => {
 });
 
 export const confirmAppointment = catchAsync(async (req, res) => {
-  const { paystackRef } = req.user;
+  const { paystackRef } = req.params;
+
 
   if (!paystackRef) {
     throw new AppError("Payment reference not found", 400);
@@ -310,11 +340,32 @@ export const confirmAppointment = catchAsync(async (req, res) => {
     .populate("users")
     .populate("staffMembers");
 
+  await createdChat.save();
+
   const updatedAppointment = await Appointment.findOneAndUpdate(
     { paystackRef },
     { $set: { status: "confirmed" } },
     { new: true }
   ).populate("doctorId patientId");
 
-  res.status(200).send(updatedAppointment);
+  // Get individual components
+  const year = appointment.appointmentTime.getFullYear();
+  const month = appointment.appointmentTime.getMonth() + 1; // Months are 0-indexed
+  const day = appointment.appointmentTime.getDate();
+  const hour = appointment.appointmentTime.getHours();
+  const minutes = appointment.appointmentTime.getMinutes();
+  const seconds = appointment.appointmentTime.getSeconds();
+
+  const humanReadableDate = `${year}-${month}-${day} ${hour}:${minutes}:${seconds}`;
+
+  const newNotifcation = new Notification({
+    user: req.user._id,
+    type: "appointment",
+    recipients: [appointment.doctorId],
+    content: `Appointment set sccessfully. Time of appointment is ${humanReadableDate}, please be punctual`,
+  });
+
+  await newNotifcation.save();
+
+  res.status(200).send({ first: updatedAppointment, second: newNotifcation });
 });

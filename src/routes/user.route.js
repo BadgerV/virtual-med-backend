@@ -3,11 +3,14 @@ import { auth } from "../common/middleware/auth.js";
 import {
   ConnectUserWithDoctor,
   allUsers,
+  getAllNotifications,
+  getAvailabilityForUsers,
   getUser,
   initializePayment,
   // initiatePremiumSubscription,
   loginUser,
   registerUser,
+  setNickname,
   verifyAccount,
 } from "../controllers/user.controller.js";
 import { isPremium } from "../common/middleware/auth.js";
@@ -23,6 +26,7 @@ export const userRoutes = () => {
   router.get("/verify/", verifyAccount);
   router.post("/login", loginUser);
   router.get("/profile", auth, getUser);
+  router.post("/set-nickname", auth, setNickname);
 
   router.get("/get-all-users", auth, allUsers);
 
@@ -38,6 +42,10 @@ export const userRoutes = () => {
   );
 
   router.post("/connectUserWithDoctor", auth, isPremium, ConnectUserWithDoctor);
+
+  router.get("/notifcations", auth, isPremium, getAllNotifications);
+
+  router.post("/get-doctor-availability", getAvailabilityForUsers);
 
   return router;
 };

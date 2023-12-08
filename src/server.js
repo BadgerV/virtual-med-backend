@@ -19,19 +19,50 @@ import http from "http";
 /**
  * Default app configurations
  */
+
 const app = express();
 
-const server = http.createServer(app);
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Credentials", true);
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
 
+
+app.use(
+  cors({
+    origin: [
+      "https://6a76-105-113-87-154.ngrok-free.app",
+      "http://localhost:5173",
+    ],
+    // origin: "https://6572dd9f62d11566266a7fb4--teal-caramel-97d899.netlify.app",
+    credentials: true,
+  })
+);
+
+const server = http.createServer(app); // Use the same server for Express and Socket.IO
 const io = new SocketIOServer(server, {
+  pingTimeout: 60000,
   cors: {
-    origin: "http://localhost:5173",
+    // origin: "https://6572dd9f62d11566266a7fb4--teal-caramel-97d899.netlify.app",
+    origin: [
+      "https://6a76-105-113-87-154.ngrok-free.app",
+      "http://localhost:5173",
+    ],
   },
 });
+// io.on("connection", (socket) => {
+//   console.log("a reply detected!");
 
-io.on("connection", (socket) => {
-  console.log("Connected to socket.io");
-});
+//   socket.on("setup", (userData) => {
+//     socket.join(userData._id)
+//     socket.emit("connectetd")
+//   })
+// });
 
 const port = ENVIRONMENT.APP.PORT;
 const appName = ENVIRONMENT.APP.NAME;
@@ -40,12 +71,7 @@ const appName = ENVIRONMENT.APP.NAME;
  * App Security
  */
 app.use(helmet());
-app.use(
-  cors({
-    origin: "http://localhost:5173",
-    credentials: true,
-  })
-);
+
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
 app.disable("x-powered-by");
@@ -101,7 +127,7 @@ app.use(handleError);
 /**
  * Bootstrap server
  */
-app.listen(port, () => {
-  console.log("=> " + appName + "app listening on port" + port + "!");
+server.listen(port, () => {
+  console.log("=> " + appName + "app listening on port " + port + "!");
   connectDb();
 });
