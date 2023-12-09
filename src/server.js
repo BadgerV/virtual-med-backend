@@ -22,25 +22,17 @@ import http from "http";
 
 const app = express();
 
-app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Credentials", true);
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  next();
-});
 
 
 app.use(
   cors({
     origin: [
-      "https://6a76-105-113-87-154.ngrok-free.app",
+      "https://ad22-105-113-87-68.ngrok-free.app",
       "http://localhost:5173",
     ],
     // origin: "https://6572dd9f62d11566266a7fb4--teal-caramel-97d899.netlify.app",
     credentials: true,
+    methods: "GET,PUT,POST,DELETE",
   })
 );
 
@@ -50,9 +42,10 @@ const io = new SocketIOServer(server, {
   cors: {
     // origin: "https://6572dd9f62d11566266a7fb4--teal-caramel-97d899.netlify.app",
     origin: [
-      "https://6a76-105-113-87-154.ngrok-free.app",
+      "https://ad22-105-113-87-68.ngrok-free.app",
       "http://localhost:5173",
     ],
+    methods: "GET,PUT,POST,DELETE",
   },
 });
 // io.on("connection", (socket) => {
@@ -75,6 +68,7 @@ app.use(helmet());
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
 app.disable("x-powered-by");
+
 app.use(
   cookieParser({
     secret: ENVIRONMENT.APP.SECRET,

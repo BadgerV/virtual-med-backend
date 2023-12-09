@@ -127,7 +127,7 @@ const payStack = {
         email: email,
         amount: price * 100,
         reference: reference,
-        callback_url: "https://6a76-105-113-87-154.ngrok-free.app/verify",
+        callback_url: "https://ad22-105-113-87-68.ngrok-free.app/verify",
       });
       // options
       const options = {
@@ -271,7 +271,6 @@ export const makeAppointment = catchAsync(async (req, res) => {
 export const confirmAppointment = catchAsync(async (req, res) => {
   const { paystackRef } = req.params;
 
-
   if (!paystackRef) {
     throw new AppError("Payment reference not found", 400);
   }
@@ -295,6 +294,8 @@ export const confirmAppointment = catchAsync(async (req, res) => {
   // Find the appointment using paymentReference and update the property
   const appointment = await Appointment.findOne({ paystackRef });
 
+  console.log(appointment);
+
   if (!appointment) {
     throw new AppError("Appointment not found", 404);
   }
@@ -317,6 +318,25 @@ export const confirmAppointment = catchAsync(async (req, res) => {
     { $addToSet: { currentPatients: appointment.patientId } },
     { new: true }
   );
+
+  const foundStaff1 = await Staff.findOneAndUpdate(
+    { _id: appointment.doctorId },
+    {
+      $pull: {
+        availability: {
+          startTime: { $lte: appointment.appointmentTime },
+          endTime: {
+            $gte: new Date(
+              appointment.appointmentTime.getTime() +
+                appointment.duration * 60000
+            ),
+          },
+        },
+      },
+    },
+    { new: true } // This option returns the modified document
+  );
+
 
   await foundStaff.save();
 
@@ -367,5 +387,5 @@ export const confirmAppointment = catchAsync(async (req, res) => {
 
   await newNotifcation.save();
 
-  res.status(200).send({ first: updatedAppointment, second: newNotifcation });
+  res.status(200).send(updatedAppointment);
 });
