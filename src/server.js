@@ -31,8 +31,7 @@ app.use(
       "https://657820fd294e943121d969ba--teal-caramel-97d899.netlify.app/",
     ],
     // origin: "https://6572dd9f62d11566266a7fb4--teal-caramel-97d899.netlify.app",
-    credentials: true,
-    methods: "GET,PUT,POST,DELETE",
+\    methods: "GET,PUT,POST,DELETE",
   })
 );
 
@@ -42,7 +41,6 @@ export const io = new SocketIOServer(server, {
   pingTimeout: 60000,
   cors: {
     origin: true,
-    credentials: true,
   },
   allowEIO3: true,
 });
