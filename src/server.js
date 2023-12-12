@@ -31,7 +31,7 @@ app.use(
       "https://657820fd294e943121d969ba--teal-caramel-97d899.netlify.app/",
     ],
     // origin: "https://6572dd9f62d11566266a7fb4--teal-caramel-97d899.netlify.app",
-\    methods: "GET,PUT,POST,DELETE",
+    methods: "GET,PUT,POST,DELETE",
   })
 );
 
