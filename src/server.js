@@ -28,6 +28,7 @@ app.use(
       "https://ad22-105-113-87-68.ngrok-free.app",
       "http://localhost:5173",
       "https://e9d4-105-112-26-10.ngrok-free.app",
+      "https://65781e15e97ae5339da35c51--teal-caramel-97d899.netlify.app/",
     ],
     // origin: "https://6572dd9f62d11566266a7fb4--teal-caramel-97d899.netlify.app",
     credentials: true,
@@ -45,6 +46,7 @@ export const io = new SocketIOServer(server, {
       "https://ad22-105-113-87-68.ngrok-free.app",
       "http://localhost:5173",
       "https://e9d4-105-112-26-10.ngrok-free.app",
+      "https://65781e15e97ae5339da35c51--teal-caramel-97d899.netlify.app/",
     ],
   },
 });

@@ -263,7 +263,8 @@ const payStack = {
         email: email,
         amount: price * 100,
         reference: reference,
-        callback_url: "https://e9d4-105-112-26-10.ngrok-free.app/verify",
+        callback_url:
+          "https://65781e15e97ae5339da35c51--teal-caramel-97d899.netlify.app/verify",
       });
       // options
 
