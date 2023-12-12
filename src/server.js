@@ -22,13 +22,12 @@ import http from "http";
 
 const app = express();
 
-
-
 app.use(
   cors({
     origin: [
       "https://ad22-105-113-87-68.ngrok-free.app",
       "http://localhost:5173",
+      "https://e9d4-105-112-26-10.ngrok-free.app",
     ],
     // origin: "https://6572dd9f62d11566266a7fb4--teal-caramel-97d899.netlify.app",
     credentials: true,
@@ -37,25 +36,33 @@ app.use(
 );
 
 const server = http.createServer(app); // Use the same server for Express and Socket.IO
-const io = new SocketIOServer(server, {
+
+export const io = new SocketIOServer(server, {
   pingTimeout: 60000,
   cors: {
     // origin: "https://6572dd9f62d11566266a7fb4--teal-caramel-97d899.netlify.app",
     origin: [
       "https://ad22-105-113-87-68.ngrok-free.app",
       "http://localhost:5173",
+      "https://e9d4-105-112-26-10.ngrok-free.app",
     ],
-    methods: "GET,PUT,POST,DELETE",
   },
 });
+
 // io.on("connection", (socket) => {
 //   console.log("a reply detected!");
-
-//   socket.on("setup", (userData) => {
-//     socket.join(userData._id)
-//     socket.emit("connectetd")
-//   })
 // });
+io.on("connection", (socket) => {
+  socket.on("setup", (chatID) => {
+    socket.join(chatID);
+    socket.emit("connected");
+  });
+
+  socket.on("new message", (newMessageRecieved, chatID) => {
+    console.log(newMessageRecieved);
+    socket.to(chatID).emit("message recieved", newMessageRecieved);
+  });
+});
 
 const port = ENVIRONMENT.APP.PORT;
 const appName = ENVIRONMENT.APP.NAME;
