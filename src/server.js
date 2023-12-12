@@ -41,15 +41,12 @@ const server = http.createServer(app); // Use the same server for Express and So
 export const io = new SocketIOServer(server, {
   pingTimeout: 60000,
   cors: {
-    // origin: "https://6572dd9f62d11566266a7fb4--teal-caramel-97d899.netlify.app",
-    origin: [
-      "https://ad22-105-113-87-68.ngrok-free.app",
-      "http://localhost:5173",
-      "https://e9d4-105-112-26-10.ngrok-free.app",
-      "https://657820fd294e943121d969ba--teal-caramel-97d899.netlify.app/",
-    ],
+    origin: true,
+    credentials: true,
   },
+  allowEIO3: true,
 });
+
 
 // io.on("connection", (socket) => {
 //   console.log("a reply detected!");
