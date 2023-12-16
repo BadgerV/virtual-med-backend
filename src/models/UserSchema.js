@@ -59,8 +59,7 @@ const UserSchema = new mongoose.Schema(
             minLength: 4,
           });
         },
-        message:
-          "Password not strong enough",
+        message: "Password not strong enough",
       },
     },
     phoneNumber: {
