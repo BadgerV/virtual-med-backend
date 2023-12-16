@@ -65,14 +65,11 @@ const StaffSchema = new mongoose.Schema(
           // Use the validator library to check if the password is strong enough
           // You can customize the strength criteria based on your requirements
           return validator.isStrongPassword(value, {
-            minLength: 8,
-            minUppercase: 1,
-            minLowercase: 1,
-            minNumbers: 1,
+            minLength: 4,
           });
         },
         message:
-          "Password must be strong with at least 8 characters, including uppercase, lowercase, and numbers",
+          "Password not strong enough",
       },
     },
     yearsOfExperience: {
