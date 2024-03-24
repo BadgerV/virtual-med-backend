@@ -20,7 +20,7 @@ const app = express();
 
 app.use(cors());
 
-const server = http.createServer(app); // Use the same server for Express and Socket.IO
+const server = http.createServer(app); 
 
 export const io = new SocketIOServer(server);
 
