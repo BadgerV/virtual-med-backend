@@ -79,7 +79,7 @@ const StaffSchema = new mongoose.Schema(
     },
     speciality: {
       type: String,
-      //nothing ieefi
+
     },
     passportImage: {
       type: String,
