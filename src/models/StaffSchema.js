@@ -27,6 +27,8 @@ const availabilitySchema = new mongoose.Schema({
   },
 });
 
+//this is another frivolous comment
+
 const StaffSchema = new mongoose.Schema(
   {
     firstName: {
