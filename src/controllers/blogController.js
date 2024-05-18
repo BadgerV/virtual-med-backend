@@ -32,8 +32,13 @@ export const getThreePosts = catchAsync(async (req, res) => {
       // { $match: { hourToShow: currentHour } }, // Assuming 'hourToShow' is a field in the Post model
       { $sample: { size: 3 } }, // Fetch 3 random posts
     ]);
+    // Step 2: Populate the author field
+    const populatedPosts = await Post.populate(posts, {
+      path: "author",
+      select: "firstName lastName", // Specify the fields you want to include
+    });
 
-    res.send(posts);
+    res.send(populatedPosts);
   } catch (error) {
     console.error("Error fetching hourly posts:", error);
     throw new AppError("Failed to fetch hourly posts");
