@@ -13837,6 +13837,7 @@ Use mongoose.model(name, schema) - /chat/accessChat - POST - ::1
 2023-12-12 17:07:59 info: POST /appointment/makeAppointment [32m200 1413.738 ms - 213
 2023-12-12 17:08:11 info: GET /user/profile [36m304 224.331 ms - -
 2023-12-12 17:08:15 info: GET /appointment/confirmAppointment/e8d244ef-ae62-4e2c-ac54-11b57fce3a3d [32m200 3238.369 ms - 13229
+<<<<<<< HEAD
 2024-05-14 15:58:37 error: 500 - Cannot read properties of undefined (reading 'replace') - /blog/create-post - GET - ::1
 2024-05-14 15:58:37 info: GET /blog/create-post [31m500 9.748 ms - 1519
 2024-05-14 16:00:48 error: 500 - Please login to continue - /blog/create-post - GET - ::1
@@ -14224,3 +14225,5 @@ Use mongoose.model(name, schema) - /chat/accessChat - POST - ::1
 2024-05-18 17:58:19 info: GET /blog/post/get-3-posts [32m200 238.276 ms - 5889
 2024-05-18 18:09:15 info: GET /blog/post/get-3-posts [32m200 223.034 ms - 3236
 2024-05-18 18:13:07 info: GET /blog/post/get-3-posts [32m200 262.965 ms - 4188
+=======
+>>>>>>> 185b0437cd46f9782c20a8821fb981a242bd8179
